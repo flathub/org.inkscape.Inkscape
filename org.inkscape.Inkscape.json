@@ -199,15 +199,9 @@
             "name": "inkscape",
             "sources": [
                 {
-                    "type": "file",
-                    "url": "https://inkscape.org/gallery/item/10682/inkscape-0.92.1.tar_XlpI7qT.bz2",
-                    "sha256": "257405bf802de125f17d123638093a37db02ebe334d243cf9b0d8903f7c89005"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "tar xfj inkscape-0.92.1.tar_XlpI7qT.bz2 --strip-components=1"
-                    ]
+                    "type": "archive",
+                    "url": "https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2",
+                    "sha256": "6d98fa4deb85011f432ab00c14954ac3f7832d6e32822c962539b8e57d2c2810"
                 }
             ]
         }
