@@ -216,8 +216,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/en/gallery/item/11254/inkscape-0.92.2.tar.bz2",
-                    "sha256": "a628d0e04c254e9840947e6d866974f92c68ae31631a38b94d9b65e5cd84cfd3"
+                    "url": "https://inkscape.org/en/gallery/item/12187/inkscape-0.92.3.tar.bz2",
+                    "sha256": "063296c05a65d7a92a0f627485b66221487acfc64a24f712eb5237c4bd7816b2"
                 }
             ]
         }
