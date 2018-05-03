@@ -74,7 +74,7 @@
                 {
                     "type": "archive",
                     "url": "http://ftp.halifax.rwth-aachen.de/gnu/gsl/gsl-2.3.tar.gz",
-                    "sha256": "562500b789cd599b3a4f88547a7a3280538ab2ff4939504c8b4ac4ca25feadfb" 
+                    "sha256": "562500b789cd599b3a4f88547a7a3280538ab2ff4939504c8b4ac4ca25feadfb"
                 }
             ]
         },
@@ -166,6 +166,39 @@
                     "type": "archive",
                     "url": "https://pypi.python.org/packages/39/e8/a8e0b1fa65dd021d48fe21464f71783655f39a41f218293c1c590d54eb82/lxml-3.7.3.tar.gz",
                     "sha256": "aa502d78a51ee7d127b4824ff96500f0181d3c7826e6ee7b800d068be79361c7"
+                }
+            ]
+        },
+        {
+            "name": "six",
+            "buildsystem": "simple",
+            "ensure-writable": ["easy-install.pth"],
+            "build-commands": [
+                "python ./setup.py build",
+                "python ./setup.py install --prefix=/app --optimize=1"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz",
+                    "sha256": "70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+
+                }
+            ]
+        },
+        {
+            "name": "scour",
+            "buildsystem": "simple",
+            "ensure-writable": ["easy-install.pth"],
+            "build-commands": [
+                "python ./setup.py build",
+                "python ./setup.py install --prefix=/app --optimize=1"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/1a/9a/7e9f7a40241c1d2659655a5f10ef3d9a84b18365c845f030825d709d59b1/scour-0.36.tar.gz",
+                    "sha256": "4bea49397b9e03bf35e951895296b2f8fde4ac9f101c891ff818db30bdb13f2a"
                 }
             ]
         },
