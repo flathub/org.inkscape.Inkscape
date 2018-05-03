@@ -28,6 +28,7 @@
         "/share/doc",
         "/share/gc",
         "/share/info",
+        "/share/man",
         "/share/pkgconfig",
         "*.la",
         "*.a"
@@ -225,6 +226,40 @@
                     "type": "archive",
                     "url": "https://poppler.freedesktop.org/poppler-0.55.0.tar.xz",
                     "sha256": "537f2bc60d796525705ad9ca8e46899dcc99c2e9480b80051808bae265cdc658"
+                }
+            ]
+        },
+        {
+            "name": "ghostscript",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-dbus",
+                "--disable-cups",
+                "--disable-openjpeg",
+                "--disable-gtk",
+                "--without-libtiff",
+                "--without-libjbig2dec",
+                "--with-drivers=PS"
+            ],
+            "build-options": {
+                "arch": {
+                    "arm": {
+                        "config-opts": [
+                            "--disable-sse2"
+                        ]
+                    },
+                    "aarch64": {
+                        "config-opts": [
+                            "--disable-sse2"
+                        ]
+                    }
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs923/ghostscript-9.23.tar.gz",
+                    "sha256": "f65964807a3c97a2c0810d4b9806585367e73129e57ae33378cea18e07a1ed9b"
                 }
             ]
         },
