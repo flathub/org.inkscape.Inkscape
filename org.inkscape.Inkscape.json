@@ -237,11 +237,24 @@
                 "--disable-cups",
                 "--disable-openjpeg",
                 "--disable-gtk",
-                "--disable-sse2",
                 "--without-libtiff",
                 "--without-libjbig2dec",
                 "--with-drivers=PS"
             ],
+            "build-options": {
+                "arch": {
+                    "arm": {
+                        "config-opts": [
+                            "--disable-sse2"
+                        ]
+                    },
+                    "aarch64": {
+                        "config-opts": [
+                            "--disable-sse2"
+                        ]
+                    }
+                }
+            },
             "sources": [
                 {
                     "type": "archive",
