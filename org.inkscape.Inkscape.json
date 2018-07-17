@@ -231,10 +231,15 @@
         },
         {
             "name": "ghostscript",
-            "config-opts": [ "--disable-cups" ],
+            "config-opts": [
+              "--disable-cups",
+              "--disable-dbus",
+              "--disable-openjpeg",
+              "--disable-gtk"
+            ],
             "make-args": [ "so" ],
             "make-install-args": [ "soinstall" ],
-            "cleanup": [ "/bin", "/share/man", "/share/ghostscript/9.20/doc/", "/share/ghostscript/9.20/examples" ],
+            "cleanup": [ "/share/man", "/share/ghostscript/9.20/doc/", "/share/ghostscript/9.20/examples" ],
             "sources": [
                 {
                     "type": "archive",
