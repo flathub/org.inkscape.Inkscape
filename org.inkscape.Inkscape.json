@@ -20,6 +20,7 @@
         }
     },
     "cleanup": [
+        "/bin/poppler-glib-demo",
         "/bin/gsl-*",
         "/include",
         "/lib/pkgconfig",
