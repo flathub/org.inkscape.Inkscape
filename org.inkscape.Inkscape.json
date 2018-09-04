@@ -242,14 +242,14 @@
             "make-install-args": [ "soinstall" ],
             "cleanup": [
                 "/share/man",
-                "/share/ghostscript/9.23/doc/",
-                "/share/ghostscript/9.23/examples"
+                "/share/ghostscript/9.24/doc/",
+                "/share/ghostscript/9.24/examples"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs923/ghostscript-9.23.tar.xz",
-                    "sha256": "1fcedc27d4d6081105cdf35606cb3f809523423a6cf9e3c23cead3525d6ae8d9"
+                    "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs924/ghostscript-9.24.tar.xz",
+                    "sha256": "d44917df24979a05e0cb3916531928cc2adc91f5b17b419ee023d16ab31069d6"
                 },
                 {
                     "type": "shell",
@@ -258,7 +258,7 @@
                         "cp -p /usr/share/automake-*/config.{sub,guess} ijs/",
                         "cp -p /usr/share/automake-*/config.{sub,guess} jpeg/",
                         "cp -p /usr/share/automake-*/config.{sub,guess} libpng/",
-                        "cp -p /usr/share/automake-*/config.{sub,guess} lcms2art/",
+                        "cp -p /usr/share/automake-*/config.{sub,guess} lcms2mt/",
                         "cp -p /usr/share/automake-*/config.{sub,guess} tiff/config/",
                         "rm -rf libpng/pngread.c"
                     ]
