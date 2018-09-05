@@ -1,0 +1,73 @@
+--- inkscape-0.92.3/inkscape.appdata.xml.in	2018-03-11 21:38:09.000000000 +0100
++++ inkscape-0.92.3/inkscape.appdata.xml.in.with-release-info	2018-09-05 18:10:29.515765714 +0200
+@@ -1,26 +1,27 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2016 Richard Hughes <richard@hughsie.com> -->
+ <component type="desktop">
+-  <id>inkscape.desktop</id>
++  <id>org.inkscape.Inkscape</id>
++  <launchable type="desktop-id">inkscape.desktop</launchable>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-2.0+</project_license>
+   <translation type="gettext">inkscape</translation>
+-  <_name>Inkscape</_name>
+-  <_summary>Vector Graphics Editor</_summary>
++  <name>Inkscape</name>
++  <summary>Vector Graphics Editor</summary>
+   <description>
+-    <_p>
++    <p>
+       An Open Source vector graphics editor, with capabilities similar to
+       Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector
+       Graphics (SVG) file format.
+-    </_p>
+-    <_p>
++    </p>
++    <p>
+       Inkscape supports many advanced SVG features (markers, clones, alpha blending,
+       etc.) and great care is taken in designing a streamlined interface.
+       It is very easy to edit nodes, perform complex path operations, trace
+       bitmaps and much more.
+       We also aim to maintain a thriving user and developer community by using
+       open, community-oriented development.
+-    </_p>
++    </p>
+   </description>
+   <url type="homepage">http://inkscape.org/</url>
+   <url type="bugtracker">https://inkscape.org/en/contribute/report-bugs/</url>
+@@ -32,5 +33,34 @@
+       <_caption>Main application window</_caption>
+     </screenshot>
+   </screenshots>
+-  <update_contact><!-- upstream-contact_at_email.com --></update_contact>
++  <releases>
++    <release version="0.92.3" date="2018-03-23">
++      <description>
++        <ul>
++          <li>New command-line options to control page size when exporting to SVG</li>
++          <li>Support for left-to-right languages in the text tool</li>
++          <li>Improvements to the circle/ellipse/arc tool</li>
++          <li>Support for multi-line text when exporting to PDF+LaTeX</li>
++          <li>Many bugfixes</li>
++          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.3</li>
++        </ul>
++      </description>
++    </release>
++    <release version="0.92.2" date="2017-08-07">
++      <description>
++        <ul>
++          <li>Better importing and exporting of EMF/WMF files, PDF/PDF+Latex documents, Visio Stencil files, and XML files</li>
++          <li>Greater stability when printing on Windows</li>
++          <li>Improved fill and stroke HSL color selection</li>
++          <li>Greater stability when reverting and saving files</li>
++          <li>An additional handle at the center of rectangles, circles/ellipses, and stars, to allow quick and accurate alignment of these shapes with other objects</li>
++          <li>A command line option for updating the file's DPI value that allows for easier processing of large file collections</li>
++          <li>Improvements to user-defined shortcuts, including the acceptance of previously restricted special characters</li>
++          <li>Migration to Gitlab to make contribution easier. See https://inkscape.org/en/news/2017/06/10/inkscape-moves-gitlab/</li>
++          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.2</li>
++        </ul>
++      </description>
++    </release>
++  </releases>
++  <content_rating type="oars-1.1" />
+ </component>
