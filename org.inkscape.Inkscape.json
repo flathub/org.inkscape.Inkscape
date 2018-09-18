@@ -242,8 +242,8 @@
             "make-install-args": [ "soinstall" ],
             "cleanup": [
                 "/share/man",
-                "/share/ghostscript/9.24/doc/",
-                "/share/ghostscript/9.24/examples"
+                "/share/ghostscript/9.25/doc/",
+                "/share/ghostscript/9.25/examples"
             ],
             "sources": [
                 {
