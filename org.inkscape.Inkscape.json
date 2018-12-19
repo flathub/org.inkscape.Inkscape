@@ -10,7 +10,9 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
-        "--filesystem=host"
+        "--filesystem=host",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--talk-name=com.canonical.AppMenu.Registrar"
     ],
     "build-options": {
         "cflags": "-O2",
