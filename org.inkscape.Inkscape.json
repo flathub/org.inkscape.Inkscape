@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.30",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "rename-desktop-file": "inkscape.desktop",
@@ -12,13 +12,6 @@
         "--socket=x11",
         "--filesystem=host"
     ],
-    "build-options": {
-        "cflags": "-O2",
-        "cxxflags": "-O2 -std=c++14",
-        "env": {
-            "V": "1"
-        }
-    },
     "cleanup": [
         "/bin/poppler-glib-demo",
         "/bin/gsl-*",
@@ -35,6 +28,8 @@
         "*.a"
     ],
     "modules": [
+        "shared-modules/gtk2/gtk2.json",
+        "shared-modules/python2.7/python-2.7.15.json",
         {
             "name": "boost",
             "buildsystem": "simple",
@@ -45,28 +40,47 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
-                    "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+                    "url": "https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2",
+                    "sha256": "8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406"
                 }
             ]
         },
         {
-            "name": "sigc++-2",
+            "name": "mm-common",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.8/libsigc++-2.8.0.tar.xz",
-                    "sha256": "774980d027c52947cb9ee4fac6ffe2ca60cc2f753068a89dfd281c83dbff9651"
+                    "url": "http://ftp.gnome.org/pub/GNOME/sources/mm-common/0.9/mm-common-0.9.12.tar.xz",
+                    "sha256": "ceffdcce1e5b52742884c233ec604bf6fded12eea9da077ce7a62c02c87e7c0b"
+                }
+            ],
+            "cleanup": [
+                "*"
+            ]
+        },
+        {
+            "name": "sigc++-2",
+            "config-opts": [
+                "--disable-documentation"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.1.tar.xz",
+                    "sha256": "c9a25f26178c6cbb147f9904d8c533b5a5c5111a41ac2eb781eb734eea446003"
                 }
             ]
         },
         {
             "name": "sigc++-3",
+            "config-opts": [
+                "--disable-documentation"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.99/libsigc++-2.99.7.tar.xz",
-                    "sha256": "e819884fec16ee20f97773361258b9a911580d5b64fd9da981ef0c80356ff5f9"
+                    "url": "https://download.gnome.org/sources/libsigc++/2.99/libsigc++-2.99.12.tar.xz",
+                    "sha256": "d902ae277f5baf2d56025586e2153cc2f158472e382723c67f49049f7c6690a8"
                 }
             ]
         },
@@ -75,8 +89,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.halifax.rwth-aachen.de/gnu/gsl/gsl-2.3.tar.gz",
-                    "sha256": "562500b789cd599b3a4f88547a7a3280538ab2ff4939504c8b4ac4ca25feadfb"
+                    "url": "https://ftp.gnu.org/gnu/gsl/gsl-2.5.tar.gz",
+                    "sha256": "0460ad7c2542caaddc6729762952d345374784100223995eb14d614861f2258d"
                 }
             ]
         },
@@ -85,18 +99,38 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://http.debian.net/debian/pool/main/libg/libgc/libgc_7.4.2.orig.tar.gz",
-                    "sha256": "09f21d38dd42bced14d6875f55804cb1b5e6bc486da7980187ecd2e768739c62"
+                    "url": "https://github.com/ivmai/bdwgc/archive/v8.0.2.tar.gz",
+                    "sha256": "711ef890f7bc473c0b043c6372c09b8b747ac5141c01a32182ccc393f3b272b3"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "libatomic_ops",
+                    "config-opts": [
+                        "--enable-shared",
+                        "--disable-static"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.8/libatomic_ops-7.6.8.tar.gz",
+                            "sha256": "1d6a279edf81767e74d2ad2c9fce09459bc65f12c6525a40b0cb3e53c089f665"
+                        }
+                    ]
                 }
             ]
         },
         {
             "name": "cairomm",
+            "config-opts": [
+                "--disable-documentation"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/cairomm/1.12/cairomm-1.12.0.tar.xz",
-                    "sha256": "a54ada8394a86182525c0762e6f50db6b9212a2109280d13ec6a0b29bfd1afe6"
+                    "url": "https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz",
+                    "sha1": "621546f32221a2ddc079167a13ce5b5409bed704",
+                    "sha256": "45c47fd4d0aa77464a75cdca011143fea3ef795c4753f6e860057da5fb8bd599"
                 }
             ]
         },
@@ -105,37 +139,46 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/glibmm/2.48/glibmm-2.48.1.tar.xz",
-                    "sha256": "dc225f7d2f466479766332483ea78f82dc349d59399d30c00de50e5073157cdf"
+                    "url": "https://download.gnome.org/sources/glibmm/2.58/glibmm-2.58.0.tar.xz",
+                    "sha256": "d34189237b99e88228e6f557f7d6e62f767fe356f395a244f5ad0e486254b645"
                 }
             ]
         },
         {
             "name": "pangomm",
+            "config-opts": [
+                "--disable-documentation"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/pangomm/2.40/pangomm-2.40.1.tar.xz",
-                    "sha256": "9762ee2a2d5781be6797448d4dd2383ce14907159b30bc12bf6b08e7227be3af"
+                    "url": "https://download.gnome.org/sources/pangomm/2.42/pangomm-2.42.0.tar.xz",
+                    "sha256": "ca6da067ff93a6445780c0b4b226eb84f484ab104b8391fb744a45cbc7edbf56"
                 }
             ]
         },
         {
             "name": "atkmm",
+            "config-opts": [
+                "--disable-documentation"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/atkmm/2.24/atkmm-2.24.2.tar.xz",
-                    "sha256": "ff95385759e2af23828d4056356f25376cfabc41e690ac1df055371537e458bd"
+                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.0.tar.xz",
+                    "sha256": "4c4cfc917fd42d3879ce997b463428d6982affa0fb660cafcc0bc2d9afcedd3a"
                 }
             ]
         },
         {
             "name": "gtkmm",
+            "config-opts": [
+                "--disable-documentation"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/gtkmm/2.24/gtkmm-2.24.5.tar.xz",
+                    "url": "https://download.gnome.org/sources/gtkmm/2.24/gtkmm-2.24.5.tar.xz",
                     "sha256": "0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72"
                 }
             ]
@@ -143,67 +186,21 @@
         {
             "name": "potrace",
             "config-opts": ["--with-libpotrace"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://potrace.sourceforge.net/download/1.14/potrace-1.14.tar.gz",
-                    "sha256": "db72b65311cfdcb63880b317f610d84485f086e15f88ca2346012d49414cd97e"
-                }
-            ]
-        },
-        {
-            "name": "lxml",
-            "buildsystem": "simple",
-            "build-commands": [
-                "python ./setup.py build",
-                "python ./setup.py install --prefix=/app --optimize=1"
-            ],
             "build-options": {
                 "env": {
-                    "XSLT_CONFIG": "pkg-config libxslt"
+                    "CC": "gcc"
                 }
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://pypi.python.org/packages/39/e8/a8e0b1fa65dd021d48fe21464f71783655f39a41f218293c1c590d54eb82/lxml-3.7.3.tar.gz",
-                    "sha256": "aa502d78a51ee7d127b4824ff96500f0181d3c7826e6ee7b800d068be79361c7"
+                    "url": "https://downloads.sourceforge.net/project/potrace/1.15/potrace-1.15.tar.gz",
+                    "sha256": "a9b33904ace328340c850a01458199e0064e03ccaaa731bc869a842b1b8d529d"
                 }
             ]
         },
-        {
-            "name": "six",
-            "buildsystem": "simple",
-            "ensure-writable": ["easy-install.pth"],
-            "build-commands": [
-                "python ./setup.py build",
-                "python ./setup.py install --prefix=/app --optimize=1"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz",
-                    "sha256": "70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
-
-                }
-            ]
-        },
-        {
-            "name": "scour",
-            "buildsystem": "simple",
-            "ensure-writable": ["easy-install.pth"],
-            "build-commands": [
-                "python ./setup.py build",
-                "python ./setup.py install --prefix=/app --optimize=1"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/1a/9a/7e9f7a40241c1d2659655a5f10ef3d9a84b18365c845f030825d709d59b1/scour-0.36.tar.gz",
-                    "sha256": "4bea49397b9e03bf35e951895296b2f8fde4ac9f101c891ff818db30bdb13f2a"
-                }
-            ]
-        },
+        "python2-lxml.json",
+        "python2-scour.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake",
@@ -265,22 +262,7 @@
                 }
             ]
         },
-        {
-            "name": "numpy",
-            "buildsystem": "simple",
-            "ensure-writable": ["easy-install.pth"],
-            "build-commands": [
-                "mkdir -p /app/lib/python2.7/site-packages",
-                "CFLAGS='-L/usr/lib -Lbuild/temp.linux-x86_64-3.4 -I/usr/include -I/usr/include/python2.7' CXX=/usr/bin/g++ CC=/usr/bin/gcc PYTHONUSERBASE=/app/ python setup.py install --prefix=/app # Working around linking issues"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://pypi.python.org/packages/05/84/0feb999c05f252af50a5fbc463268044feda92cdaad8cb0d0a6073d76057/numpy-1.13.0.zip#md5=fd044f0b8079abeaf5e6d2e93b2c1d03",
-                    "sha256": "dcff367b725586830ff0e20b805c7654c876c2d4585c0834a6049502b9d6cf7e"
-                }
-            ]
-        },
+        "python2-numpy.json",
         {
             "name": "inkscape",
             "sources": [
