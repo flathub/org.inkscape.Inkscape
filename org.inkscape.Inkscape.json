@@ -274,7 +274,8 @@
                 {
                     "type": "archive",
                     "url": "https://sk1project.net/dc.php?target=uniconvertor-1.1.5.tar.gz",
-                    "sha256": "c3a9ecb70779911470e01c6b1950b07fc2fe1880777a1e70e44251323f4d5882"
+                    "sha256": "c3a9ecb70779911470e01c6b1950b07fc2fe1880777a1e70e44251323f4d5882",
+                    "dest-filename": "uniconvertor-1.1.5.tar.gz"
                 }
             ],
             "modules": [
@@ -289,7 +290,8 @@
                         {
                             "type": "archive",
                             "url": "https://sk1project.net/dc.php?target=sk1libs-0.9.1.tar.gz",
-                            "sha256": "bb44520a5fab2998a8013a91874ff109f25bbd8e01bbddafe0b6e7db0631719a"
+                            "sha256": "bb44520a5fab2998a8013a91874ff109f25bbd8e01bbddafe0b6e7db0631719a",
+                            "dest-filename": "sk1libs-0.9.1.tar.gz"
                         }
                     ]
                 }
