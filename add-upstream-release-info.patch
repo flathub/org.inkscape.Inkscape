@@ -1,12 +1,6 @@
---- inkscape-0.92.3/inkscape.appdata.xml.in	2018-03-11 21:38:09.000000000 +0100
-+++ inkscape-0.92.3/inkscape.appdata.xml.in.with-release-info	2018-09-05 18:10:29.515765714 +0200
-@@ -1,26 +1,27 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <!-- Copyright 2016 Richard Hughes <richard@hughsie.com> -->
- <component type="desktop">
--  <id>inkscape.desktop</id>
-+  <id>org.inkscape.Inkscape</id>
-+  <launchable type="desktop-id">inkscape.desktop</launchable>
+--- inkscape-0.92.4/inkscape.appdata.xml.in	2019-01-15 05:29:27.000000000 +0100
++++ inkscape-0.92.4/inkscape.appdata.xml.in.with-release-info	2019-01-16 18:40:32.138317475 +0100
+@@ -5,32 +5,73 @@
    <metadata_license>CC0-1.0</metadata_license>
    <project_license>GPL-2.0+</project_license>
    <translation type="gettext">inkscape</translation>
@@ -33,14 +27,34 @@
 -    </_p>
 +    </p>
    </description>
-   <url type="homepage">http://inkscape.org/</url>
-   <url type="bugtracker">https://inkscape.org/en/contribute/report-bugs/</url>
-@@ -32,5 +33,34 @@
+-  <url type="homepage">http://inkscape.org/</url>
+-  <url type="bugtracker">https://inkscape.org/en/contribute/report-bugs/</url>
+-  <url type="donation">https://inkscape.org/en/support-us/donate/</url>
+-  <url type="help">https://inkscape.org/en/learn/books/</url>
++  <url type="homepage">https://inkscape.org</url>
++  <url type="bugtracker">https://inkscape.org/contribute/report-bugs</url>
++  <url type="donation">https://inkscape.org/support-us/donate</url>
++  <url type="help">https://inkscape.org/learn</url>
+   <screenshots>
+     <screenshot type="default">
+       <image>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/inkscape/a.png</image>
        <_caption>Main application window</_caption>
      </screenshot>
    </screenshots>
 -  <update_contact><!-- upstream-contact_at_email.com --></update_contact>
 +  <releases>
++    <release version="0.92.4" date="2019-01-16">
++      <description>
++        <ul>
++          <li>Improvements to the align and distribute tool</li>
++          <li>Support for piping standard input and output</li>
++          <li>The color slider can be constrained to stepped values</li>
++          <li>Performance improvements</li>
++          <li>Many bugfixes</li>
++          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.4</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="0.92.3" date="2018-03-23">
 +      <description>
 +        <ul>
