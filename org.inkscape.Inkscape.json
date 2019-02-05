@@ -274,6 +274,10 @@
                 {
                     "type": "patch",
                     "path": "add-upstream-release-info.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "a7e7d55596ecadf6a3d62aa01bebcb034dd22965.patch"
                 }
             ]
         }
