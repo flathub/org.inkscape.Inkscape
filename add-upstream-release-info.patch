@@ -51,6 +51,7 @@
 +          <li>The color slider can be constrained to stepped values</li>
 +          <li>Performance improvements</li>
 +          <li>Many bugfixes</li>
++          <li>And many more!</li>
 +        </ul>
 +      </description>
 +    </release>
@@ -62,6 +63,7 @@
 +          <li>Improvements to the circle/ellipse/arc tool</li>
 +          <li>Support for multi-line text when exporting to PDF+LaTeX</li>
 +          <li>Many bugfixes</li>
++          <li>And many more!</li>
 +        </ul>
 +      </description>
 +    </release>
@@ -76,6 +78,7 @@
 +          <li>A command line option for updating the file's DPI value that allows for easier processing of large file collections</li>
 +          <li>Improvements to user-defined shortcuts, including the acceptance of previously restricted special characters</li>
 +          <li>Migration to Gitlab to make contribution easier.</li>
++          <li>And many more!/li>
 +        </ul>
 +      </description>
 +    </release>
