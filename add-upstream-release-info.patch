@@ -51,7 +51,6 @@
 +          <li>The color slider can be constrained to stepped values</li>
 +          <li>Performance improvements</li>
 +          <li>Many bugfixes</li>
-+          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.4</li>
 +        </ul>
 +      </description>
 +    </release>
@@ -63,7 +62,6 @@
 +          <li>Improvements to the circle/ellipse/arc tool</li>
 +          <li>Support for multi-line text when exporting to PDF+LaTeX</li>
 +          <li>Many bugfixes</li>
-+          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.3</li>
 +        </ul>
 +      </description>
 +    </release>
@@ -77,8 +75,7 @@
 +          <li>An additional handle at the center of rectangles, circles/ellipses, and stars, to allow quick and accurate alignment of these shapes with other objects</li>
 +          <li>A command line option for updating the file's DPI value that allows for easier processing of large file collections</li>
 +          <li>Improvements to user-defined shortcuts, including the acceptance of previously restricted special characters</li>
-+          <li>Migration to Gitlab to make contribution easier. See https://inkscape.org/en/news/2017/06/10/inkscape-moves-gitlab/</li>
-+          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.2</li>
++          <li>Migration to Gitlab to make contribution easier.</li>
 +        </ul>
 +      </description>
 +    </release>
