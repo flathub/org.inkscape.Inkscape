@@ -1,12 +1,13 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
-    "rename-desktop-file": "inkscape.desktop",
-    "rename-appdata-file": "inkscape.appdata.xml",
-    "rename-icon": "inkscape",
+    "tags" : [
+       "beta"
+    ],
+    "desktop-file-name-suffix": " (Beta)",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -28,8 +29,6 @@
         "*.a"
     ],
     "modules": [
-        "shared-modules/gtk2/gtk2.json",
-        "shared-modules/python2.7/python-2.7.15.json",
         {
             "name": "boost",
             "buildsystem": "simple",
@@ -129,7 +128,6 @@
                 {
                     "type": "archive",
                     "url": "https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz",
-                    "sha1": "621546f32221a2ddc079167a13ce5b5409bed704",
                     "sha256": "45c47fd4d0aa77464a75cdca011143fea3ef795c4753f6e860057da5fb8bd599"
                 }
             ]
@@ -165,21 +163,38 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.0.tar.xz",
-                    "sha256": "4c4cfc917fd42d3879ce997b463428d6982affa0fb660cafcc0bc2d9afcedd3a"
+                    "url" : "http://ftp.gnome.org/pub/GNOME/sources/atkmm/2.24/atkmm-2.24.2.tar.xz",
+                    "sha256" : "ff95385759e2af23828d4056356f25376cfabc41e690ac1df055371537e458bd"
                 }
             ]
         },
         {
-            "name": "gtkmm",
-            "config-opts": [
+            "name" : "gtkmm",
+            "config-opts" : [
                 "--disable-documentation"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "http://ftp.gnome.org/pub/GNOME/sources/gtkmm/3.24/gtkmm-3.24.0.tar.xz",
+                    "sha256" : "cf5fc92805e581c8303e08d54519457ba07f15b766e9b1edde4862993ac1aa43"
+                }
+            ]
+        },
+        {
+            "name": "gdl",
+            "cleanup" : [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "modules": [
+                "shared-modules/intltool/intltool-0.51.json"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtkmm/2.24/gtkmm-2.24.5.tar.xz",
-                    "sha256": "0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72"
+                    "url": "https://download.gnome.org/sources/gdl/3.34/gdl-3.34.0.tar.xz",
+                    "sha256": "858b30f0cdce4c4cb3e8365a7d54ce57c388beff38ea583be5449bc78dda8d02"
                 }
             ]
         },
@@ -199,8 +214,8 @@
                 }
             ]
         },
-        "python2-lxml.json",
-        "python2-scour.json",
+        "python3-lxml.json",
+        "python3-scour.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake",
@@ -262,22 +277,70 @@
                 }
             ]
         },
-        "python2-numpy.json",
+        "python3-numpy.json",
         {
-            "name": "inkscape",
+            "name": "double-conversion",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/13330/inkscape-0.92.4_A6N0YOn.tar.bz2",
-                    "sha256": "57ec2da8177b36614a513e2822efd73af721e690f7ddc6bd0a5fbb1525b4515e"
+                    "url": "https://github.com/google/double-conversion/archive/v3.1.5.tar.gz",
+                    "sha256": "a63ecb93182134ba4293fd5f22d6e08ca417caafa244afaa751cbfddf6415b13",
+                    "dest-filename": "double-conversion-3.1.5.tar.gz"
+                }
+            ]
+        },
+        {
+            "name": "libwpd",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/bin/wpd*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/libwpd/libwpd/libwpd-0.9.9/libwpd-0.9.9.tar.xz",
+                    "sha256" : "b91df4ca0ef0f456be9531c9ee07cf6a5e50a16b52002abb99e8ebef13fac2b2"
+                }
+            ]
+        },
+        {
+            "name": "libwpg",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/bin/wpg*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.2.2/libwpg-0.2.2.tar.xz",
+                    "sha256": "b49bfd77b9447534dee0d43bbdc48b4dcb09339605be21c01726243d5069a6cd"
+                }
+            ]
+        },
+        {
+            "name": "inkscape",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "shell",
+                    "commands": [
+                        "ln -sf /usr/bin/python3 /app/bin/python"
+                    ]
+                },
+                {
+                    "type": "archive",
+                    "url": "https://inkscape.org/gallery/item/14917/inkscape-1.0beta1.tar.bz2",
+                    "sha256": "1ff374cea44a881882b34937c29844726c3f7ae6b01374be624d83c8af6be0b6"
                 },
                 {
                     "type": "patch",
-                    "path": "add-upstream-release-info.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "a7e7d55596ecadf6a3d62aa01bebcb034dd22965.patch"
+                    "path": "appdata-fixes.patch"
                 }
             ]
         }
