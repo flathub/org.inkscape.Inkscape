@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "rename-desktop-file": "inkscape.desktop",
@@ -29,7 +29,7 @@
     ],
     "modules": [
         "shared-modules/gtk2/gtk2.json",
-        "shared-modules/python2.7/python-2.7.15.json",
+        "shared-modules/python2.7/python-2.7.json",
         {
             "name": "boost",
             "buildsystem": "simple",
