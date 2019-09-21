@@ -163,8 +163,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url" : "http://ftp.gnome.org/pub/GNOME/sources/atkmm/2.24/atkmm-2.24.2.tar.xz",
-                    "sha256" : "ff95385759e2af23828d4056356f25376cfabc41e690ac1df055371537e458bd"
+                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.0.tar.xz",
+                    "sha256": "4c4cfc917fd42d3879ce997b463428d6982affa0fb660cafcc0bc2d9afcedd3a"
                 }
             ]
         },
@@ -294,6 +294,24 @@
             ]
         },
         {
+            "name": "librevenge",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "config-opts": [
+                "--disable-tests",
+                "--disable-werror"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.xz",
+                    "sha256" : "933f0729f04267cc354b9a02bc3e9afefa5512a3bdd0b45f159ee14a3e3347b2"
+                }
+            ]
+        },
+        {
             "name": "libwpd",
             "cleanup": [
                 "/include",
@@ -303,8 +321,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libwpd/libwpd/libwpd-0.9.9/libwpd-0.9.9.tar.xz",
-                    "sha256" : "b91df4ca0ef0f456be9531c9ee07cf6a5e50a16b52002abb99e8ebef13fac2b2"
+                    "url": "https://downloads.sourceforge.net/project/libwpd/libwpd/libwpd-0.10.3/libwpd-0.10.3.tar.xz",
+                    "sha256" : "2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09"
                 }
             ]
         },
@@ -318,8 +336,52 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.2.2/libwpg-0.2.2.tar.xz",
-                    "sha256": "b49bfd77b9447534dee0d43bbdc48b4dcb09339605be21c01726243d5069a6cd"
+                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.3.3/libwpg-0.3.3.tar.xz",
+                    "sha256": "99b3f7f8832385748582ab8130fbb9e5607bd5179bebf9751ac1d51a53099d1c"
+                }
+            ]
+        },
+        {
+            "name": "libvisio",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/bin/vsd*",
+                "/bin/vss*"
+            ],
+            "config-opts": [
+                "--disable-tests"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.7.tar.xz",
+                    "sha256": "8faf8df870cb27b09a787a1959d6c646faa44d0d8ab151883df408b7166bea4c"
+                }
+            ]
+        },
+        {
+            "name": "libcdr",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/bin/cmx*",
+                "/bin/cdr*"
+            ],
+            "config-opts": [
+                "--disable-tests"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.5.tar.xz",
+                    "sha256": "6ace5c499a8be34ad871e825442ce388614ae2d8675c4381756a7319429e3a48"
+                },
+                {
+                    "type" : "shell",
+                    "commands" : [
+                        "autoreconf -vfi"
+                    ]
                 }
             ]
         },
