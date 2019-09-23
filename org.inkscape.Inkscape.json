@@ -370,6 +370,10 @@
                 {
                     "type": "patch",
                     "path": "a7e7d55596ecadf6a3d62aa01bebcb034dd22965.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata-fixes.patch"
                 }
             ]
         }

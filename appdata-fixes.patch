@@ -1,0 +1,61 @@
+diff --git a/inkscape.appdata.xml.in b/inkscape.appdata.xml.in
+index 6e1860f7af..dd8b8158f1 100644
+--- a/inkscape.appdata.xml.in
++++ b/inkscape.appdata.xml.in
+@@ -41,42 +41,46 @@
+   <releases>
+     <release version="0.92.4" date="2019-01-16">
+       <description>
++        <p>New 0.92.x bugfix release.</p>
+         <ul>
+           <li>Improvements to the align and distribute tool</li>
+           <li>Support for piping standard input and output</li>
+           <li>The color slider can be constrained to stepped values</li>
+           <li>Performance improvements</li>
+-          <li>Many bugfixes</li>
+-          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.4</li>
++          <li>And many more bugfixes</li>
+         </ul>
+       </description>
++      <url>http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.4</url>
+     </release>
+     <release version="0.92.3" date="2018-03-23">
+       <description>
++        <p>New 0.92.x bugfix release.</p>
+         <ul>
+           <li>New command-line options to control page size when exporting to SVG</li>
+           <li>Support for left-to-right languages in the text tool</li>
+           <li>Improvements to the circle/ellipse/arc tool</li>
+           <li>Support for multi-line text when exporting to PDF+LaTeX</li>
+-          <li>Many bugfixes</li>
+-          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.3</li>
++          <li>And many more bugfixes</li>
+         </ul>
+       </description>
++      <url>http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.3</url>
+     </release>
+     <release version="0.92.2" date="2017-08-07">
+       <description>
++        <p>New 0.92.x bugfix release.</p>
+         <ul>
+-          <li>Better importing and exporting of EMF/WMF files, PDF/PDF+Latex documents, Visio Stencil files, and XML files</li>
++          <li>Better importing and exporting</li>
+           <li>Greater stability when printing on Windows</li>
+           <li>Improved fill and stroke HSL color selection</li>
+           <li>Greater stability when reverting and saving files</li>
+-          <li>An additional handle at the center of rectangles, circles/ellipses, and stars, to allow quick and accurate alignment of these shapes with other objects</li>
+-          <li>A command line option for updating the file's DPI value that allows for easier processing of large file collections</li>
+-          <li>Improvements to user-defined shortcuts, including the acceptance of previously restricted special characters</li>
+-          <li>Migration to Gitlab to make contribution easier. See https://inkscape.org/en/news/2017/06/10/inkscape-moves-gitlab/</li>
+-          <li>And many more! See the full list at http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.2</li>
++          <li>An additional handle at the center of shapes</li>
++          <li>A command line option for updating the file's DPI</li>
++          <li>Improvements to user-defined shortcuts</li>
++          <li>Migration to Gitlab to make contribution easier</li>
++          <li>And many more bugfixes!</li>
+         </ul>
+       </description>
++      <url>http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92.2</url>
+     </release>
+   </releases>
+   <provides>
