@@ -264,6 +264,49 @@
         },
         "python2-numpy.json",
         {
+            "name": "librevenge",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "config-opts": [
+                "--disable-tests",
+                "--disable-werror"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.xz",
+                    "sha256" : "933f0729f04267cc354b9a02bc3e9afefa5512a3bdd0b45f159ee14a3e3347b2"
+                }
+            ]
+        },
+        {
+            "name": "libcdr",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/bin/cmx*",
+                "/bin/cdr*"
+            ],
+            "config-opts": [
+                "--disable-tests"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.5.tar.xz",
+                    "sha256": "6ace5c499a8be34ad871e825442ce388614ae2d8675c4381756a7319429e3a48"
+                },
+                {
+                    "type" : "shell",
+                    "commands" : [
+                        "autoreconf -vfi"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "inkscape",
             "sources": [
                 {
