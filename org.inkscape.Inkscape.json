@@ -397,12 +397,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/14917/inkscape-1.0beta1.tar.bz2",
-                    "sha256": "1ff374cea44a881882b34937c29844726c3f7ae6b01374be624d83c8af6be0b6"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata-fixes.patch"
+                    "url": "https://inkscape.org/gallery/item/16197/inkscape-1.0beta2_2019-12-03_2b71d25d45.tar.xz",
+                    "sha256": "c375945fb8c71a9911db68b6e090f149e31a89f89fbfbb42447b87bd626dc328"
                 }
             ]
         }
