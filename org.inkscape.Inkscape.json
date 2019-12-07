@@ -75,6 +75,9 @@
             "config-opts": [
                 "--disable-documentation"
             ],
+            "cleanup": [
+                "/lib/sigc++-3.0"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -124,6 +127,9 @@
             "config-opts": [
                 "--disable-documentation"
             ],
+            "cleanup": [
+                "/lib/cairomm-1.0"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -134,6 +140,9 @@
         },
         {
             "name": "glibmm",
+            "cleanup": [
+                "/lib/glibmm-2.4"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -160,6 +169,9 @@
             "config-opts": [
                 "--disable-documentation"
             ],
+            "cleanup": [
+                "/lib/atkmm-1.6"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -172,6 +184,9 @@
             "name" : "gtkmm",
             "config-opts" : [
                 "--disable-documentation"
+            ],
+            "cleanup": [
+                "/lib/gtkmm-3.0"
             ],
             "sources" : [
                 {
@@ -382,6 +397,32 @@
                     "commands" : [
                         "autoreconf -vfi"
                     ]
+                }
+            ]
+        },
+        {
+            "name": "gtkspell",
+            "modules": [
+                {
+                    "name": "enchant",
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
+                            "sha256": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d"
+                        }
+                    ]
+                }
+            ],
+            "cleanup": [
+                "*.la",
+                "/share/gtk-doc"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/gtkspell/files/3.0.10/gtkspell3-3.0.10.tar.xz",
+                    "sha256": "b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732"
                 }
             ]
         },
