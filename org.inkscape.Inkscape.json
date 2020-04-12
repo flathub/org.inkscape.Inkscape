@@ -439,8 +439,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/16197/inkscape-1.0beta2_2019-12-03_2b71d25d45.tar.xz",
-                    "sha256": "c375945fb8c71a9911db68b6e090f149e31a89f89fbfbb42447b87bd626dc328"
+                    "url": "https://inkscape.org/gallery/item/18046/inkscape-1.0rc1_2020-04-09_09960d6f05.tar.xz",
+                    "sha256": "e0ddad9c7281744318f4ff02f98c62b400a6a96dad17885bd211dec1ca732432"
                 }
             ]
         }
