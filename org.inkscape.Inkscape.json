@@ -10,7 +10,8 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
-        "--filesystem=host"
+        "--filesystem=host",
+        "--talk-name=com.canonical.AppMenu.Registrar"
     ],
     "cleanup": [
         "/bin/poppler-glib-demo",
