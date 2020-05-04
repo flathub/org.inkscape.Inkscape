@@ -4,12 +4,10 @@
     "runtime-version": "3.36",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
-    "rename-desktop-file": "inkscape.desktop",
-    "rename-appdata-file": "inkscape.appdata.xml",
-    "rename-icon": "inkscape",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
+        "--socket=wayland",
         "--filesystem=host"
     ],
     "cleanup": [
@@ -28,8 +26,6 @@
         "*.a"
     ],
     "modules": [
-        "shared-modules/gtk2/gtk2.json",
-        "shared-modules/python2.7/python-2.7.json",
         {
             "name": "boost",
             "buildsystem": "simple",
@@ -75,6 +71,9 @@
             "name": "sigc++-3",
             "config-opts": [
                 "--disable-documentation"
+            ],
+            "cleanup": [
+                "/lib/sigc++-3.0"
             ],
             "sources": [
                 {
@@ -125,17 +124,22 @@
             "config-opts": [
                 "--disable-documentation"
             ],
+            "cleanup": [
+                "/lib/cairomm-1.0"
+            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz",
-                    "sha1": "621546f32221a2ddc079167a13ce5b5409bed704",
                     "sha256": "45c47fd4d0aa77464a75cdca011143fea3ef795c4753f6e860057da5fb8bd599"
                 }
             ]
         },
         {
             "name": "glibmm",
+            "cleanup": [
+                "/lib/glibmm-2.4"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -162,6 +166,9 @@
             "config-opts": [
                 "--disable-documentation"
             ],
+            "cleanup": [
+                "/lib/atkmm-1.6"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -171,15 +178,35 @@
             ]
         },
         {
-            "name": "gtkmm",
-            "config-opts": [
+            "name" : "gtkmm",
+            "config-opts" : [
                 "--disable-documentation"
+            ],
+            "cleanup": [
+                "/lib/gtkmm-3.0"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "http://ftp.gnome.org/pub/GNOME/sources/gtkmm/3.24/gtkmm-3.24.0.tar.xz",
+                    "sha256" : "cf5fc92805e581c8303e08d54519457ba07f15b766e9b1edde4862993ac1aa43"
+                }
+            ]
+        },
+        {
+            "name": "gdl",
+            "cleanup" : [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "modules": [
+                "shared-modules/intltool/intltool-0.51.json"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtkmm/2.24/gtkmm-2.24.5.tar.xz",
-                    "sha256": "0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72"
+                    "url": "https://download.gnome.org/sources/gdl/3.34/gdl-3.34.0.tar.xz",
+                    "sha256": "858b30f0cdce4c4cb3e8365a7d54ce57c388beff38ea583be5449bc78dda8d02"
                 }
             ]
         },
@@ -199,8 +226,8 @@
                 }
             ]
         },
-        "python2-lxml.json",
-        "python2-scour.json",
+        "python3-lxml.json",
+        "python3-scour.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake",
@@ -262,7 +289,22 @@
                 }
             ]
         },
-        "python2-numpy.json",
+        "python3-numpy.json",
+        {
+            "name": "double-conversion",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/google/double-conversion/archive/v3.1.5.tar.gz",
+                    "sha256": "a63ecb93182134ba4293fd5f22d6e08ca417caafa244afaa751cbfddf6415b13",
+                    "dest-filename": "double-conversion-3.1.5.tar.gz"
+                }
+            ]
+        },
         {
             "name": "librevenge",
             "cleanup": [
@@ -356,21 +398,49 @@
             ]
         },
         {
+            "name": "gtkspell",
+            "modules": [
+                {
+                    "name": "enchant",
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
+                            "sha256": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d"
+                        }
+                    ]
+                }
+            ],
+            "cleanup": [
+                "*.la",
+                "/share/gtk-doc"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/gtkspell/files/3.0.10/gtkspell3-3.0.10.tar.xz",
+                    "sha256": "b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732"
+                }
+            ]
+        },
+        {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
+                    "type": "shell",
+                    "commands": [
+                        "ln -sf /usr/bin/python3 /app/bin/python"
+                    ]
+                },
+                {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/18051/inkscape-0.92.5.tar.bz2",
-                    "sha256": "81ee7f69e2bd64a97343d8395a4a7a7905b21b861566ed5e5d9179178d519a0b"
+                    "url": "https://inkscape.org/gallery/item/18460/inkscape-1.0_2020-05-01_4035a4fb49.tar.xz",
+                    "sha256": "89c123d1a62ac52db6a08fe3be730584411b89a88ecc528a410b4f3fa53f94bb"
                 },
                 {
                     "type": "patch",
-                    "path": "appdata-fixes.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata-fixes-2.patch"
+                    "path": "inkscape-appdata.patch"
                 }
             ]
         }

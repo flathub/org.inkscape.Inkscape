@@ -1,8 +1,8 @@
 {
-    "name": "python2-numpy",
+    "name": "python3-numpy",
     "buildsystem": "simple",
     "build-commands": [
-        "pip2 install --no-index --find-links=\"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" numpy"
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" numpy"
     ],
     "sources": [
         {
