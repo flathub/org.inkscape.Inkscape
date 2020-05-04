@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/16/4a/b085a04d6dad79aa5c00c65c9b2bbcb2c6c22e5ac341e7968e0ad2c57e2f/lxml-4.3.0.tar.gz",
-            "sha256": "d1e111b3ab98613115a208c1017f266478b0ab224a67bc8eac670fa0bad7d488"
+            "url": "https://files.pythonhosted.org/packages/39/2b/0a66d5436f237aff76b91e68b4d8c041d145ad0a2cdeefe2c42f76ba2857/lxml-4.5.0.tar.gz",
+            "sha256": "8620ce80f50d023d414183bf90cc2576c2837b88e00bea3f33ad2630133bbb60"
         }
     ]
 }
