@@ -225,10 +225,10 @@
         },
         {
             "name": "poppler",
-            "buildsystem": "autotools",
+            "buildsystem": "cmake",
             "config-opts": [
-                "--enable-libopenjpeg=none",
-                "--enable-xpdf-headers"
+                "-DENABLE_LIBOPENJPEG=none",
+                "-DENABLE_UNSTABLE_API_ABI_HEADERS=ON"
             ],
             "sources": [
                 {
