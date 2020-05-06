@@ -214,7 +214,7 @@
         "python3-scour.json",
         {
             "name": "poppler-data",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
@@ -225,7 +225,7 @@
         },
         {
             "name": "poppler",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DENABLE_LIBOPENJPEG=none",
                 "-DENABLE_UNSTABLE_API_ABI_HEADERS=ON"
