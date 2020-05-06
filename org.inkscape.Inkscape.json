@@ -27,7 +27,7 @@
     ],
     "modules": [
         {
-            "name": "boost",
+            "name": "boost-headers",
             "buildsystem": "simple",
             "build-commands": [
                 "mkdir -p /app/include",
