@@ -412,12 +412,6 @@
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
-                    "type": "shell",
-                    "commands": [
-                        "ln -sf /usr/bin/python3 /app/bin/python"
-                    ]
-                },
-                {
                     "type": "archive",
                     "url": "https://inkscape.org/gallery/item/18460/inkscape-1.0.tar.xz",
                     "sha256": "89c123d1a62ac52db6a08fe3be730584411b89a88ecc528a410b4f3fa53f94bb"
