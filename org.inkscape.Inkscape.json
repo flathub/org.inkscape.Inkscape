@@ -25,6 +25,10 @@
         "*.la",
         "*.a"
     ],
+    "cleanup-commands": [
+        /* icc profiles */
+        "ln -sf /run/host/usr/share/color /app/share/color"
+    ],
     "modules": [
         {
             "name": "boost-headers",
