@@ -410,6 +410,9 @@
         {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
+            "post-install": [
+                "ln -sf /run/host/usr/share/color /app/share/color"
+            ],
             "sources": [
                 {
                     "type": "archive",
