@@ -274,6 +274,7 @@
                 }
             ]
         },
+        "python3-cython.json",
         "python3-numpy.json",
         {
             "name": "double-conversion",
