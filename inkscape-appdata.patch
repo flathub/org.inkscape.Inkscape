@@ -1,0 +1,11 @@
+--- a/org.inkscape.Inkscape.appdata.xml.in	2020-09-07 16:02:09.000000000 +0700
++++ b/org.inkscape.Inkscape.appdata.xml.in	2020-09-08 08:36:53.725752395 +0700
+@@ -39,7 +39,7 @@
+     </screenshot>
+   </screenshots>
+   <releases>
+-    <release version="1.0" date="2020-09-07">
++    <release version="1.0.1" date="2020-09-07">
+       <description>
+         <p>Inkscape 1.0.1</p>
+         <ul>
