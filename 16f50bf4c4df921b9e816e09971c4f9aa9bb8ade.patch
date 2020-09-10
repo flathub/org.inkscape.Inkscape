@@ -1,0 +1,25 @@
+From 16f50bf4c4df921b9e816e09971c4f9aa9bb8ade Mon Sep 17 00:00:00 2001
+From: Marc Jeanmougin <marc@jeanmougin.fr>
+Date: Tue, 8 Sep 2020 00:59:36 +0200
+Subject: [PATCH] Fix appdata
+
+---
+ org.inkscape.Inkscape.appdata.xml.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/org.inkscape.Inkscape.appdata.xml.in b/org.inkscape.Inkscape.appdata.xml.in
+index a99ecddb20..e1febd5034 100644
+--- a/org.inkscape.Inkscape.appdata.xml.in
++++ b/org.inkscape.Inkscape.appdata.xml.in
+@@ -39,7 +39,7 @@
+     </screenshot>
+   </screenshots>
+   <releases>
+-    <release version="1.0" date="2020-09-07">
++    <release version="1.0.1" date="2020-09-07">
+       <description>
+         <p>Inkscape 1.0.1</p>
+         <ul>
+-- 
+GitLab
+

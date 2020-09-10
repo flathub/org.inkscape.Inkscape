@@ -1,0 +1,33 @@
+From a094366511c87a46916e2f0d2b7a1dc2f540e411 Mon Sep 17 00:00:00 2001
+From: Emmanuel Gil Peyrot <linkmauve@linkmauve.fr>
+Date: Tue, 8 Sep 2020 23:18:58 +0200
+Subject: [PATCH] Add missing atomic include
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This was found while updating Inkscape to 1.0.1 on Flathub, see
+https://flathub.org/builds/#/builders/12/builds/3192/steps/6/logs/stdio
+
+I don’t know why it was working with the majority of compilers without
+this change, probably some transitive include which doesn’t happen in
+the Flatpak’s case.
+---
+ src/ui/tool/node.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/ui/tool/node.cpp b/src/ui/tool/node.cpp
+index eef6e486b8..2da9bf74b1 100644
+--- a/src/ui/tool/node.cpp
++++ b/src/ui/tool/node.cpp
+@@ -7,6 +7,7 @@
+  * Released under GNU GPL v2+, read the file 'COPYING' for more information.
+  */
+ 
++#include <atomic>
+ #include <iostream>
+ #include <stdexcept>
+ #include <boost/utility.hpp>
+-- 
+GitLab
+

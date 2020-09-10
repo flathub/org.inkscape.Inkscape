@@ -36,18 +36,19 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2",
-                    "sha256": "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
+                    "url": "https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.bz2",
+                    "sha256": "83bfc1507731a0906e387fc28b7ef5417d591429e51e788417fe9ff025e116b1"
                 }
             ]
         },
         {
             "name": "mm-common",
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.0.tar.xz",
-                    "sha256": "b97d9b041e5952486cab620b44ab09f6013a478f43b6699ae899b8a4da189cd4"
+                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.1.tar.xz",
+                    "sha256": "28a2d775afbf05c5c957b24b220ed6e9b2023179b98ecde471d89e9754ea5ac9"
                 }
             ],
             "cleanup": [
@@ -205,8 +206,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/potrace/1.15/potrace-1.15.tar.gz",
-                    "sha256": "a9b33904ace328340c850a01458199e0064e03ccaaa731bc869a842b1b8d529d"
+                    "url": "https://downloads.sourceforge.net/project/potrace/1.16/potrace-1.16.tar.gz",
+                    "sha256": "be8248a17dedd6ccbaab2fcc45835bb0502d062e40fbded3bc56028ce5eb7acc"
                 }
             ]
         },
@@ -233,8 +234,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-0.88.0.tar.xz",
-                    "sha256": "b4453804e9a5a519e6ceee0ac8f5efc229e3b0bf70419263c239124474d256c7"
+                    "url": "https://poppler.freedesktop.org/poppler-20.09.0.tar.xz",
+                    "sha256": "4ed6eb5ddc4c37f2435c9d78ff9c7c4036455aea3507d1ce8400070aab745363"
                 }
             ]
         },
@@ -273,6 +274,7 @@
                 }
             ]
         },
+        "python3-cython.json",
         "python3-numpy.json",
         {
             "name": "double-conversion",
@@ -389,8 +391,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.8/enchant-2.2.8.tar.gz",
-                            "sha256": "c7b5e2853f0dd0b1aafea2f9e071941affeec3a76df8e3f6d67a718c89293555"
+                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.10/enchant-2.2.10.tar.gz",
+                            "sha256": "6a5b34c40647d8524b73a2b0d7104a6375504059ece61ae5ce459500d62cbdc3"
                         }
                     ]
                 }
@@ -416,12 +418,16 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/18460/inkscape-1.0.tar.xz",
-                    "sha256": "89c123d1a62ac52db6a08fe3be730584411b89a88ecc528a410b4f3fa53f94bb"
+                    "url": "https://inkscape.org/gallery/item/21571/inkscape-1.0.1.tar.xz",
+                    "sha256": "cf9295edf46a633caf3aac0562364a24aef7cd6294601365aca38aeead2d57c2"
                 },
                 {
                     "type": "patch",
-                    "path": "inkscape-appdata.patch"
+                    "path": "16f50bf4c4df921b9e816e09971c4f9aa9bb8ade.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "2307.patch"
                 }
             ]
         }
