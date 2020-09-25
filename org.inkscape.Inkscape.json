@@ -8,7 +8,10 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--filesystem=host"
+        "--filesystem=host",
+        "--filesystem=xdg-run/gvfs",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*"
     ],
     "cleanup": [
         "/bin/poppler-glib-demo",
