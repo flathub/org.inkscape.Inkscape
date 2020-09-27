@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "3.38",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "finish-args": [
@@ -277,7 +277,6 @@
                 }
             ]
         },
-        "python3-cython.json",
         "python3-numpy.json",
         {
             "name": "double-conversion",
