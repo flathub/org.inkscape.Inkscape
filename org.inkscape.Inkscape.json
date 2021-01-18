@@ -420,16 +420,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/21571/inkscape-1.0.1.tar.xz",
-                    "sha256": "cf9295edf46a633caf3aac0562364a24aef7cd6294601365aca38aeead2d57c2"
-                },
-                {
-                    "type": "patch",
-                    "path": "16f50bf4c4df921b9e816e09971c4f9aa9bb8ade.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "2307.patch"
+                    "url": "https://inkscape.org/gallery/item/23820/inkscape-1.0.2.tar.xz",
+                    "sha256": "da3e230511a08cbf21e86710d161458594fea87867e9157b67ed01a04ea2798a"
                 }
             ]
         }
