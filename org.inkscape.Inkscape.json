@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.bz2",
-                    "sha256": "83bfc1507731a0906e387fc28b7ef5417d591429e51e788417fe9ff025e116b1"
+                    "url": "https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.bz2",
+                    "sha256": "953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb"
                 }
             ]
         },
@@ -50,8 +50,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.1.tar.xz",
-                    "sha256": "28a2d775afbf05c5c957b24b220ed6e9b2023179b98ecde471d89e9754ea5ac9"
+                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.2.tar.xz",
+                    "sha256": "a2a99f3fa943cf662f189163ed39a2cfc19a428d906dd4f92b387d3659d1641d"
                 }
             ],
             "cleanup": [
@@ -66,8 +66,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.3.tar.xz",
-                    "sha256": "0b68dfc6313c6cc90ac989c6d722a1bf0585ad13846e79746aa87cb265904786"
+                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.6.tar.xz",
+                    "sha256": "dda176dc4681bda9d5a2ac1bc55273bdd381662b7a6d49e918267d13e8774e1b"
                 }
             ]
         },
@@ -222,8 +222,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.9.tar.gz",
-                    "sha256": "1f9c7e7de9ecd0db6ab287349e31bf815ca108a5a175cf906a90163bdbe32012"
+                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz",
+                    "sha256": "6e2fcef66ec8c44625f94292ccf8af9f1d918b410d5aa69c274ce67387967b30"
                 }
             ]
         },
@@ -237,8 +237,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-20.09.0.tar.xz",
-                    "sha256": "4ed6eb5ddc4c37f2435c9d78ff9c7c4036455aea3507d1ce8400070aab745363"
+                    "url": "https://poppler.freedesktop.org/poppler-21.01.0.tar.xz",
+                    "sha256": "016dde34e5f868ea98a32ca99b643325a9682281500942b7113f4ec88d20e2f3"
                 }
             ]
         },
@@ -254,14 +254,14 @@
             "make-install-args": [ "soinstall" ],
             "cleanup": [
                 "/share/man",
-                "/share/ghostscript/9.52/doc/",
-                "/share/ghostscript/9.52/examples"
+                "/share/ghostscript/9.53/doc/",
+                "/share/ghostscript/9.53/examples"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs952/ghostscript-9.52.tar.xz",
-                    "sha256": "57442acf8b46453a9b5fc6fec738fbbb7e13a3d3e00f1aaaa0975529bc203c7c"
+                    "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9533/ghostscript-9.53.3.tar.xz",
+                    "sha256": "9c9f5bc85b6c7eb08368c05b1e3339f7aaf9677ddca710c6283f872d55e2a234"
                 },
                 {
                     "type": "shell",
@@ -393,8 +393,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.10/enchant-2.2.10.tar.gz",
-                            "sha256": "6a5b34c40647d8524b73a2b0d7104a6375504059ece61ae5ce459500d62cbdc3"
+                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.15/enchant-2.2.15.tar.gz",
+                            "sha256": "3b0f2215578115f28e2a6aa549b35128600394304bd79d6f28b0d3b3d6f46c03"
                         }
                     ]
                 }
