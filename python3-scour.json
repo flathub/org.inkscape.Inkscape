@@ -2,18 +2,13 @@
     "name": "python3-scour",
     "buildsystem": "simple",
     "build-commands": [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --install-option=\"--prefix=${FLATPAK_DEST}\" scour"
+        "pip3 install --prefix=/app ."
     ],
     "sources": [
         {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/27/aa/4246c2b25a5cce8345715980cdde41cc72157692ed2d3db4f0ed41cd83e7/scour-0.37.tar.gz",
-            "sha256": "963113779c6877cbdd99bb6ea30ac0576dbe8b4156459ac62e579f8d22726116"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz",
-            "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+            "type": "archive",
+            "url": "https://files.pythonhosted.org/packages/75/19/f519ef8aa2f379935a44212c5744e2b3a46173bf04e0110fb7f4af4028c9/scour-0.38.2.tar.gz",
+            "sha256": "6881ec26660c130c5ecd996ac6f6b03939dd574198f50773f2508b81a68e0daf"
         }
     ]
 }
