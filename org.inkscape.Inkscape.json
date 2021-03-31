@@ -426,7 +426,8 @@
                 "-DWITH_INTERNAL_2GEOM=ON"
             ],
             "post-install": [
-                "ln -sf /run/host/usr/share/color /app/share/color"
+                "ln -sf /run/host/usr/share/color /app/share/color",
+                "ln -sf /app/share/inkscape/doc/COPYING /app/share/inkscape/doc/LICENSE"
             ],
             "sources": [
                 {
