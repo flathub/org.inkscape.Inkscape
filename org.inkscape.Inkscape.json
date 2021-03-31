@@ -414,6 +414,10 @@
         {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
+            "build-options": {
+                "cppflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66",
+                "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
+            },
             "post-install": [
                 "ln -sf /run/host/usr/share/color /app/share/color"
             ],
