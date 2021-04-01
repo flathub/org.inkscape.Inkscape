@@ -426,7 +426,6 @@
                 "-DWITH_INTERNAL_2GEOM=ON"
             ],
             "build-options": {
-                "cppflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66",
                 "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
             },
             "post-install": [
