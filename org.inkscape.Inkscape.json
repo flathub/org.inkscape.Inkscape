@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "tags" : [
@@ -10,10 +10,11 @@
     "desktop-file-name-prefix": "(Beta) ",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--filesystem=host",
         "--filesystem=xdg-run/gvfs",
+        "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*"
     ],
@@ -223,7 +224,6 @@
                 }
             ]
         },
-        "python3-lxml.json",
         "python3-scour.json",
         {
             "name": "poppler-data",
@@ -425,6 +425,10 @@
                 "-DBUILD_TESTING=OFF",
                 "-DWITH_INTERNAL_2GEOM=ON"
             ],
+            "build-options": {
+                "cppflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66",
+                "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
+            },
             "post-install": [
                 "ln -sf /run/host/usr/share/color /app/share/color",
                 "ln -sf /app/share/inkscape/doc/COPYING /app/share/inkscape/doc/LICENSE"
