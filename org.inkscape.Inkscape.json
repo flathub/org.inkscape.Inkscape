@@ -434,8 +434,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/25543/inkscape-1.1-beta1_2021-03-28_77e7b44db3.tar.xz",
-                    "sha256": "7b1374ead9c0d6a5753ada0d11a4a72d6f362aea5499f1646df970372d1b47c3"
+                    "url": "https://inkscape.org/gallery/item/26495/inkscape-1.1-rc_2021-05-02_52f87abb86.tar.xz",
+                    "sha256": "66458b28615dfd7c75140b870cbbe274df9a113b5b665407c4fae1ad11ae57f2"
                 },
                 {
                     "type": "patch",
