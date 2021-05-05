@@ -428,8 +428,7 @@
                 "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
             },
             "post-install": [
-                "ln -sf /run/host/usr/share/color /app/share/color",
-                "ln -sf /app/share/inkscape/doc/COPYING /app/share/inkscape/doc/LICENSE"
+                "ln -sf /run/host/usr/share/color /app/share/color"
             ],
             "sources": [
                 {
