@@ -435,10 +435,6 @@
                     "type": "archive",
                     "url": "https://inkscape.org/gallery/item/26495/inkscape-1.1-rc_2021-05-02_52f87abb86.tar.xz",
                     "sha256": "66458b28615dfd7c75140b870cbbe274df9a113b5b665407c4fae1ad11ae57f2"
-                },
-                {
-                    "type": "patch",
-                    "path": "cmake-fix.patch"
                 }
             ]
         }
