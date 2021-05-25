@@ -433,8 +433,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/26495/inkscape-1.1-rc_2021-05-02_52f87abb86.tar.xz",
-                    "sha256": "66458b28615dfd7c75140b870cbbe274df9a113b5b665407c4fae1ad11ae57f2"
+                    "url": "https://inkscape.org/gallery/item/26932/inkscape-1.1.tar.xz",
+                    "sha256": "71e6e8ce3fdf702f59dbc4a276665eb982eb7822b029bbdbeced2df4301795e6"
                 }
             ]
         }
