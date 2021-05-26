@@ -11,7 +11,6 @@
         "--filesystem=host",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
-        "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*"
     ],
     "cleanup": [
@@ -31,11 +30,16 @@
     ],
     "modules": [
         {
-            "name": "boost-headers",
+            "name": "boost",
             "buildsystem": "simple",
-            "build-commands": [
-                "mkdir -p /app/include",
-                "mv boost /app/include"
+            "cleanup" : [
+                "/include",
+                "/lib/libboost_*.so",
+                "/lib/libboost_*.a"
+            ],
+            "build-commands" : [
+                "./bootstrap.sh --with-libraries=filesystem",
+                "./b2 install variant=release link=shared runtime-link=shared --prefix=/app -j $FLATPAK_BUILDER_N_JOBS"
             ],
             "sources": [
                 {
@@ -386,36 +390,37 @@
             ]
         },
         {
-            "name": "gtkspell",
-            "modules": [
-                {
-                    "name": "enchant",
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.15/enchant-2.2.15.tar.gz",
-                            "sha256": "3b0f2215578115f28e2a6aa549b35128600394304bd79d6f28b0d3b3d6f46c03"
-                        }
-                    ]
-                }
+            "name": "gspell",
+            "config-opts" : [
+                "--disable-vala",
+                "--disable-gtk-doc",
+                "--disable-gtk-doc-html"
             ],
-            "cleanup": [
+            "cleanup" : [
+                "/bin",
+                "/include",
+                "/lib/pkgconfig",
                 "*.la",
-                "/share/gtk-doc"
+                "/share/gir-1.0",
+                "/share/gtk-doc",
+                "/share/vala"
             ],
-            "sources": [
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://sourceforge.net/projects/gtkspell/files/3.0.10/gtkspell3-3.0.10.tar.xz",
-                    "sha256": "b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732"
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
+                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
                 }
             ]
         },
         {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DWITH_INTERNAL_2GEOM=ON"
+            ],
             "build-options": {
-                "cppflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66",
                 "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
             },
             "post-install": [
@@ -424,8 +429,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/23820/inkscape-1.0.2.tar.xz",
-                    "sha256": "da3e230511a08cbf21e86710d161458594fea87867e9157b67ed01a04ea2798a"
+                    "url": "https://inkscape.org/gallery/item/26932/inkscape-1.1.tar.xz",
+                    "sha256": "71e6e8ce3fdf702f59dbc4a276665eb982eb7822b029bbdbeced2df4301795e6"
                 }
             ]
         }
