@@ -11,7 +11,9 @@
         "--filesystem=host",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
-        "--talk-name=org.gtk.vfs.*"
+        "--talk-name=org.gtk.vfs.*",
+        /* network access for extension manager */
+        "--share=network"
     ],
     "cleanup": [
         "/bin/poppler-glib-demo",
@@ -221,6 +223,8 @@
         },
         "python3-scour.json",
         "python3-Pillow.json",
+        "python3-requests.json",
+        "python3-appdirs.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
