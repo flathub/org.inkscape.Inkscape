@@ -220,6 +220,7 @@
             ]
         },
         "python3-scour.json",
+        "python3-Pillow.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
