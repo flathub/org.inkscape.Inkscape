@@ -418,6 +418,19 @@
                 }
             ]
         },
+	{
+            "name": "imagemagick",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.imagemagick.org/ImageMagick/download/ImageMagick-6.9.12-15.tar.xz",
+                    "sha256": "ec435b710e6c0776af84259481304afd6978e6add9364ffbfe1c2484f24af842"
+                }
+            ]
+        },
         {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
