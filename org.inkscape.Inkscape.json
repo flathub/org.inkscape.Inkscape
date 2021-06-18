@@ -12,13 +12,24 @@
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
+        "--env=PATH=/app/texlive/bin/x86_64-linux:/app/texlive/bin/aarch64-linux:/app/texlive/bin:/app/bin:/usr/bin",
         /* network access for extension manager */
         "--share=network"
     ],
+    "add-extensions": {
+        "org.freedesktop.Sdk.Extension.texlive": {
+            "directory": "texlive",
+            "subdirectories": true,
+            "autodelete": true,
+            "no-autodownload": true,
+            "version": "20.08"
+        }
+    },
     "cleanup": [
         "/bin/poppler-glib-demo",
         "/bin/gsl-*",
         "/include",
+        "/lib/cmake",
         "/lib/pkgconfig",
         "/share/aclocal",
         "/share/devhelp",
@@ -442,6 +453,7 @@
                 "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
             },
             "post-install": [
+                "install -d /app/texlive",
                 "ln -sf /run/host/usr/share/color /app/share/color"
             ],
             "sources": [
