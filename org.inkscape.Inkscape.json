@@ -46,7 +46,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.bz2",
+                    "url": "https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.bz2",
                     "sha256": "953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb"
                 }
             ]
@@ -426,7 +426,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.imagemagick.org/ImageMagick/download/ImageMagick-6.9.12-15.tar.xz",
+                    "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-6.9.12-15.tar.xz",
                     "sha256": "ec435b710e6c0776af84259481304afd6978e6add9364ffbfe1c2484f24af842"
                 }
             ]
