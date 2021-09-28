@@ -1,0 +1,10 @@
+--- libwpd/src/lib/WPXTable.h-orig	2021-09-28 00:10:10.534802649 -0400
++++ libwpd/src/lib/WPXTable.h	2021-09-28 00:10:38.504062344 -0400
+@@ -36,6 +36,7 @@
+ #ifndef _WPXTABLE_H
+ #define _WPXTABLE_H
+ 
++#include <sys/types.h>
+ #include <vector>
+ 
+ struct WPXTableCell
