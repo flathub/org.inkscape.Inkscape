@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "finish-args": [
@@ -231,8 +231,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz",
-                    "sha256": "6e2fcef66ec8c44625f94292ccf8af9f1d918b410d5aa69c274ce67387967b30"
+                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz",
+                    "sha256": "2cec05cd1bb03af98a8b06a1e22f6e6e1a65b1e2f3816cb3069bb0874825f08c"
                 }
             ]
         },
@@ -246,8 +246,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-21.01.0.tar.xz",
-                    "sha256": "016dde34e5f868ea98a32ca99b643325a9682281500942b7113f4ec88d20e2f3"
+                    "url": "https://poppler.freedesktop.org/poppler-21.09.0.tar.xz",
+                    "sha256": "5a47fef738c2b99471f9b459a8bf8b40aefb7eed92caa4861c3798b2e126d05b"
                 }
             ]
         },
@@ -332,6 +332,10 @@
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/libwpd/libwpd/libwpd-0.10.3/libwpd-0.10.3.tar.xz",
                     "sha256" : "2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09"
+                },
+                {
+                    "type": "patch",
+                    "path": "libwpd-fix.patch"
                 }
             ]
         },
@@ -383,8 +387,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.6.tar.xz",
-                    "sha256": "01cd00b04a030977e544433c2d127c997205332cd9b8e35ec0ee17110da7f861"
+                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.7.tar.xz",
+                    "sha256": "5666249d613466b9aa1e987ea4109c04365866e9277d80f6cd9663e86b8ecdd4"
                 },
                 {
                     "type" : "shell",
