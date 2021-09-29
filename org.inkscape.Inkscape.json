@@ -83,8 +83,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gsl/gsl-2.6.tar.gz",
-                    "sha256": "b782339fc7a38fe17689cb39966c4d821236c28018b6593ddb6fd59ee40786a8"
+                    "url": "https://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz",
+                    "sha256": "efbbf3785da0e53038be7907500628b466152dbc3c173a87de1b5eba2e23602b"
                 }
             ]
         },
@@ -93,8 +93,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ivmai/bdwgc/archive/v8.0.4.tar.gz",
-                    "sha256": "661d6ed06090982520f92cb88e64bb99ba88f18b33734cc2794b5c7de086d8c1"
+                    "url": "https://github.com/ivmai/bdwgc/archive/v8.0.6.tar.gz",
+                    "sha256": "3de0e3d456103a8409927ac16aa45d7b7647dd613e1f212019deab27713445cb"
                 }
             ],
             "modules": [
@@ -107,8 +107,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.10/libatomic_ops-7.6.10.tar.gz",
-                            "sha256": "587edf60817f56daf1e1ab38a4b3c729b8e846ff67b4f62a6157183708f099af"
+                            "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.12/libatomic_ops-7.6.12.tar.gz",
+                            "sha256": "f0ab566e25fce08b560e1feab6a3db01db4a38e5bc687804334ef3920c549f3e"
                         }
                     ]
                 }
@@ -208,8 +208,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdl/3.34/gdl-3.34.0.tar.xz",
-                    "sha256": "858b30f0cdce4c4cb3e8365a7d54ce57c388beff38ea583be5449bc78dda8d02"
+                    "url": "https://download.gnome.org/sources/gdl/3.40/gdl-3.40.0.tar.xz",
+                    "sha256": "3641d4fd669d1e1818aeff3cf9ffb7887fc5c367850b78c28c775eba4ab6a555"
                 }
             ]
         },
@@ -425,8 +425,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
-                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
+                    "url" : "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
+                    "sha256" : "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
                 }
             ]
         },
@@ -438,8 +438,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-6.9.12-15.tar.xz",
-                    "sha256": "ec435b710e6c0776af84259481304afd6978e6add9364ffbfe1c2484f24af842"
+                    "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-6.9.12-23.tar.xz",
+                    "sha256": "69e91deaafd1065bfc8741f99078350961f95135cd57d2a30bbc7588cc81f331"
                 }
             ]
         },
