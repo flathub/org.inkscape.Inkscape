@@ -229,6 +229,7 @@
                 }
             ]
         },
+        "python3-tkinter.yaml",
         "python3-lxml.json",
         "python3-scour.json",
         "python3-Pillow.json",
