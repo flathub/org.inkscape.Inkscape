@@ -466,8 +466,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/31668/inkscape-1.1.2.tar.xz",
-                    "sha256": "3ffe54a06d0b25a4cd8b6eb424536ef1ed205be13443a39cd437c8c7b89b96d1"
+                    "url": "https://inkscape.org/gallery/item/31673/inkscape-1.2-alpha_2022-02-05_0bd5040e63.tar.xz",
+                    "sha256": "e622a92e4bb3ff56abe3123b7b0371770a210a569656809ed965d8ff70041500"
                 }
             ]
         }
