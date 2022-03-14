@@ -4,6 +4,11 @@
     "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
+    "default-branch": "beta",
+    "tags" : [
+       "beta"
+    ],
+    "desktop-file-name-prefix": "(Beta) ",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
