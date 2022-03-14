@@ -1,21 +1,24 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
+    "default-branch": "beta",
     "tags" : [
        "beta"
     ],
     "desktop-file-name-prefix": "(Beta) ",
     "finish-args": [
         "--share=ipc",
-        "--socket=fallback-x11",
+        "--socket=x11",
         "--socket=wayland",
         "--filesystem=host",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
-        "--talk-name=org.gtk.vfs.*"
+        "--talk-name=org.gtk.vfs.*",
+        /* network access for extension manager */
+        "--share=network"
     ],
     "cleanup": [
         "/bin/poppler-glib-demo",
@@ -48,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.bz2",
-                    "sha256": "953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb"
+                    "url": "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2",
+                    "sha256": "8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc"
                 }
             ]
         },
@@ -59,8 +62,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.2.tar.xz",
-                    "sha256": "a2a99f3fa943cf662f189163ed39a2cfc19a428d906dd4f92b387d3659d1641d"
+                    "url": "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.3.tar.xz",
+                    "sha256": "e81596625899aacf1d0bf27ccc2fcc7f373405ec48735ca1c7273c0fbcdc1ef5"
                 }
             ],
             "cleanup": [
@@ -75,8 +78,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.6.tar.xz",
-                    "sha256": "dda176dc4681bda9d5a2ac1bc55273bdd381662b7a6d49e918267d13e8774e1b"
+                    "url": "https://download.gnome.org/sources/libsigc++/2.10/libsigc++-2.10.7.tar.xz",
+                    "sha256": "d082a2ce72c750f66b1a415abe3e852df2eae1e8af53010f4ac2ea261a478832"
                 }
             ]
         },
@@ -85,8 +88,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gsl/gsl-2.6.tar.gz",
-                    "sha256": "b782339fc7a38fe17689cb39966c4d821236c28018b6593ddb6fd59ee40786a8"
+                    "url": "https://ftp.gnu.org/gnu/gsl/gsl-2.7.tar.gz",
+                    "sha256": "efbbf3785da0e53038be7907500628b466152dbc3c173a87de1b5eba2e23602b"
                 }
             ]
         },
@@ -95,8 +98,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ivmai/bdwgc/archive/v8.0.4.tar.gz",
-                    "sha256": "661d6ed06090982520f92cb88e64bb99ba88f18b33734cc2794b5c7de086d8c1"
+                    "url": "https://github.com/ivmai/bdwgc/archive/v8.0.6.tar.gz",
+                    "sha256": "3de0e3d456103a8409927ac16aa45d7b7647dd613e1f212019deab27713445cb"
                 }
             ],
             "modules": [
@@ -109,8 +112,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.10/libatomic_ops-7.6.10.tar.gz",
-                            "sha256": "587edf60817f56daf1e1ab38a4b3c729b8e846ff67b4f62a6157183708f099af"
+                            "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.12/libatomic_ops-7.6.12.tar.gz",
+                            "sha256": "f0ab566e25fce08b560e1feab6a3db01db4a38e5bc687804334ef3920c549f3e"
                         }
                     ]
                 }
@@ -127,8 +130,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz",
-                    "sha256": "45c47fd4d0aa77464a75cdca011143fea3ef795c4753f6e860057da5fb8bd599"
+                    "url": "https://www.cairographics.org/releases/cairomm-1.14.3.tar.xz",
+                    "sha256": "0d37e067c5c4ca7808b7ceddabfe1932c5bd2a750ad64fb321e1213536297e78"
                 }
             ]
         },
@@ -137,31 +140,38 @@
             "cleanup": [
                 "/lib/glibmm-2.4"
             ],
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbuild-documentation=false",
+                "-Dbuild-examples=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz",
-                    "sha256": "a75282e58d556d9b2bb44262b6f5fb76c824ac46a25a06f527108bec86b8d4ec"
+                    "url": "https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.1.tar.xz",
+                    "sha256": "69bd6b5327716ca2f511ab580a969fd7bf0cd2c24ce15e1d0e530592d3ff209c"
                 }
             ]
         },
         {
             "name": "pangomm",
+            "buildsystem": "meson",
             "config-opts": [
-                "--disable-documentation"
+                "-Dbuild-documentation=false"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/pangomm/2.42/pangomm-2.42.1.tar.xz",
-                    "sha256": "14bf04939930870d5cfa96860ed953ad2ce07c3fd8713add4a1bfe585589f40f"
+                    "url": "https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.1.tar.xz",
+                    "sha256": "c885013fe61a4c5117fda395770d507563411c63e49f4a3aced4c9efe34d9975"
                 }
             ]
         },
         {
             "name": "atkmm",
+            "buildsystem": "meson",
             "config-opts": [
-                "--disable-documentation"
+                "-Dbuild-documentation=false"
             ],
             "cleanup": [
                 "/lib/atkmm-1.6"
@@ -169,15 +179,16 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.0.tar.xz",
-                    "sha256": "4c4cfc917fd42d3879ce997b463428d6982affa0fb660cafcc0bc2d9afcedd3a"
+                    "url": "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.2.tar.xz",
+                    "sha256": "a0bb49765ceccc293ab2c6735ba100431807d384ffa14c2ebd30e07993fd2fa4"
                 }
             ]
         },
         {
             "name" : "gtkmm",
-            "config-opts" : [
-                "--disable-documentation"
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbuild-documentation=false"
             ],
             "cleanup": [
                 "/lib/gtkmm-3.0"
@@ -185,8 +196,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.2.tar.xz",
-                    "sha256" : "6d71091bcd1863133460d4188d04102810e9123de19706fb656b7bb915b4adc3"
+                    "url" : "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.5.tar.xz",
+                    "sha256" : "856333de86689f6a81c123f2db15d85db9addc438bc3574c36f15736aeae22e6"
                 }
             ]
         },
@@ -202,8 +213,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdl/3.34/gdl-3.34.0.tar.xz",
-                    "sha256": "858b30f0cdce4c4cb3e8365a7d54ce57c388beff38ea583be5449bc78dda8d02"
+                    "url": "https://download.gnome.org/sources/gdl/3.40/gdl-3.40.0.tar.xz",
+                    "sha256": "3641d4fd669d1e1818aeff3cf9ffb7887fc5c367850b78c28c775eba4ab6a555"
                 }
             ]
         },
@@ -223,15 +234,20 @@
                 }
             ]
         },
+        "python3-tkinter.yaml",
+        "python3-lxml.json",
         "python3-scour.json",
+        "python3-Pillow.json",
+        "python3-requests.json",
+        "python3-appdirs.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz",
-                    "sha256": "6e2fcef66ec8c44625f94292ccf8af9f1d918b410d5aa69c274ce67387967b30"
+                    "url": "https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz",
+                    "sha256": "2cec05cd1bb03af98a8b06a1e22f6e6e1a65b1e2f3816cb3069bb0874825f08c"
                 }
             ]
         },
@@ -245,8 +261,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://poppler.freedesktop.org/poppler-21.01.0.tar.xz",
-                    "sha256": "016dde34e5f868ea98a32ca99b643325a9682281500942b7113f4ec88d20e2f3"
+                    "url": "https://poppler.freedesktop.org/poppler-21.09.0.tar.xz",
+                    "sha256": "5a47fef738c2b99471f9b459a8bf8b40aefb7eed92caa4861c3798b2e126d05b"
                 }
             ]
         },
@@ -331,6 +347,10 @@
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/libwpd/libwpd/libwpd-0.10.3/libwpd-0.10.3.tar.xz",
                     "sha256" : "2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09"
+                },
+                {
+                    "type": "patch",
+                    "path": "libwpd-fix.patch"
                 }
             ]
         },
@@ -382,8 +402,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.6.tar.xz",
-                    "sha256": "01cd00b04a030977e544433c2d127c997205332cd9b8e35ec0ee17110da7f861"
+                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.7.tar.xz",
+                    "sha256": "5666249d613466b9aa1e987ea4109c04365866e9277d80f6cd9663e86b8ecdd4"
                 },
                 {
                     "type" : "shell",
@@ -412,8 +432,21 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.8/gspell-1.8.2.tar.xz",
-                    "sha256" : "bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6"
+                    "url" : "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
+                    "sha256" : "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
+                }
+            ]
+        },
+	{
+            "name": "imagemagick",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-6.9.12-23.tar.xz",
+                    "sha256": "69e91deaafd1065bfc8741f99078350961f95135cd57d2a30bbc7588cc81f331"
                 }
             ]
         },
@@ -433,8 +466,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/26495/inkscape-1.1-rc_2021-05-02_52f87abb86.tar.xz",
-                    "sha256": "66458b28615dfd7c75140b870cbbe274df9a113b5b665407c4fae1ad11ae57f2"
+                    "url": "https://inkscape.org/gallery/item/31673/inkscape-1.2-alpha_2022-02-05_0bd5040e63.tar.xz",
+                    "sha256": "e622a92e4bb3ff56abe3123b7b0371770a210a569656809ed965d8ff70041500"
                 }
             ]
         }
