@@ -1,0 +1,11 @@
+--- inkscape-1.2-beta_2022-04-05_1b65182ce9.orig/org.inkscape.Inkscape.appdata.xml.in	2022-04-06 03:07:26.000000000 +0700
++++ inkscape-1.2-beta_2022-04-05_1b65182ce9/org.inkscape.Inkscape.appdata.xml.in	2022-04-08 08:41:47.409669922 +0700
+@@ -41,7 +41,7 @@
+     </screenshot>
+   </screenshots>
+   <releases>
+-    <release version="1.2-beta" date="2020-04-05">
++    <release version="1.2-beta" date="2022-04-05">
+       <description>
+         <p>Inkscape 1.2</p>
+         <ul>

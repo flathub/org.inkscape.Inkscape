@@ -466,8 +466,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/31673/inkscape-1.2-alpha_2022-02-05_0bd5040e63.tar.xz",
-                    "sha256": "e622a92e4bb3ff56abe3123b7b0371770a210a569656809ed965d8ff70041500"
+                    "url": "https://inkscape.org/gallery/item/32731/inkscape-1.2-beta.tar.xz",
+                    "sha256": "3d47a44b5ac46cd85988ab0139eff156840207a9d73a7577052a0a83313d650b"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata.patch"
                 }
             ]
         }
