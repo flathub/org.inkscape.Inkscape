@@ -241,6 +241,7 @@
         "python3-Pillow.json",
         "python3-requests.json",
         "python3-appdirs.json",
+        "python3-cssselect.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
