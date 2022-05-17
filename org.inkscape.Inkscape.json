@@ -470,10 +470,6 @@
                     "type": "archive",
                     "url": "https://inkscape.org/gallery/item/32731/inkscape-1.2-beta.tar.xz",
                     "sha256": "3d47a44b5ac46cd85988ab0139eff156840207a9d73a7577052a0a83313d650b"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata.patch"
                 }
             ]
         }
