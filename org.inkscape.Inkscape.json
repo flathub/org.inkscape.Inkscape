@@ -468,8 +468,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/32731/inkscape-1.2-beta.tar.xz",
-                    "sha256": "3d47a44b5ac46cd85988ab0139eff156840207a9d73a7577052a0a83313d650b"
+                    "url": "https://inkscape.org/gallery/item/33449/inkscape-1.2_2022-05-15_dc2aedaf03.tar.xz",
+                    "sha256": "8d9b31142554945664edfefe2d6b55910a5099765f7176a71107c34f1dcde6ad"
                 }
             ]
         }
