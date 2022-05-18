@@ -236,6 +236,7 @@
         "python3-Pillow.json",
         "python3-requests.json",
         "python3-appdirs.json",
+        "python3-cssselect.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
@@ -462,8 +463,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/31668/inkscape-1.1.2.tar.xz",
-                    "sha256": "3ffe54a06d0b25a4cd8b6eb424536ef1ed205be13443a39cd437c8c7b89b96d1"
+                    "url": "https://inkscape.org/gallery/item/33449/inkscape-1.2_2022-05-15_dc2aedaf03.tar.xz",
+                    "sha256": "8d9b31142554945664edfefe2d6b55910a5099765f7176a71107c34f1dcde6ad"
                 }
             ]
         }
