@@ -233,11 +233,7 @@
         "python3-tkinter.yaml",
         "python3-lxml.json",
         "python3-scour.json",
-        "python3-Pillow.json",
-        "python3-requests.json",
-        "python3-appdirs.json",
-        "python3-cssselect.json",
-        "python3-packaging.json",
+        "python3-requirements.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
