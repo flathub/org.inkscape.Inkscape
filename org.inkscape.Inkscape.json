@@ -6,8 +6,8 @@
     "command": "inkscape",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
+	"--socket=wayland",
+        "--socket=fallback-x11",
         "--filesystem=host",
         "--filesystem=xdg-config/gtk-3.0",
         "--filesystem=xdg-run/gvfs",
