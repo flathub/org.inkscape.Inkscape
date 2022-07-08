@@ -13,7 +13,6 @@
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
-        /* network access for extension manager */
         "--share=network"
     ],
     "cleanup": [
