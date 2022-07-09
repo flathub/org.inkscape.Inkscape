@@ -26,3 +26,6 @@ This application requests the following restricted permissions:
 
 - Network access for the extension mamanger: `--share=network`
 - Needs access to all files: `--filesystem=host` (FIXME?)
+- X11: we use `--socket=x11` instead of the fallback as it is required
+  for extensions that use tkinter. See
+  https://github.com/flathub/org.inkscape.Inkscape/issues/101
