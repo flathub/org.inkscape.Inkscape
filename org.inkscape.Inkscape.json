@@ -439,7 +439,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-6.9.12-23.tar.xz",
+                    "url": "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-23.tar.xz",
                     "sha256": "69e91deaafd1065bfc8741f99078350961f95135cd57d2a30bbc7588cc81f331"
                 }
             ]
@@ -460,7 +460,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/33449/inkscape-1.2_2022-05-15_dc2aedaf03.tar.xz",
+                    "url": "https://inkscape.org/gallery/item/33449/inkscape-1.2.tar.xz",
                     "sha256": "8d9b31142554945664edfefe2d6b55910a5099765f7176a71107c34f1dcde6ad"
                 }
             ]
