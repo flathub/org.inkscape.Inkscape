@@ -8,7 +8,11 @@
         {
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/18/ad/ec41343a49a0371ea40daf37b1ba2c11333cdd121cb378161635d14b9750/setuptools-59.2.0-py3-none-any.whl",
-            "sha256": "4adde3d1e1c89bde1c643c64d89cdd94cbfd8c75252ee459d4500bccb9c7d05d"
+            "sha256": "4adde3d1e1c89bde1c643c64d89cdd94cbfd8c75252ee459d4500bccb9c7d05d",
+            "x-checker-data": {
+                "type": "pypi",
+                "name": "setuptools"
+            }
         },
         {
             "type": "file",
@@ -18,12 +22,20 @@
         {
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/4c/76/1e41fbb365ad20b6efab2e61b0f4751518444c953b390f9b2d36cf97eea0/Cython-0.29.32.tar.gz",
-            "sha256": "8733cf4758b79304f2a4e39ebfac5e92341bce47bcceb26c1254398b2f8c1af7"
+            "sha256": "8733cf4758b79304f2a4e39ebfac5e92341bce47bcceb26c1254398b2f8c1af7",
+            "x-checker-data": {
+                "type": "pypi",
+                "name": "Cython"
+            }
         },
         {
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/f4/66/17b8e95770478436bf968353c89683ce6f9e14d92e0d4fb3111c09ba18d2/numpy-1.23.2.tar.gz",
-            "sha256": "b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01"
+            "sha256": "b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01",
+            "x-checker-data": {
+                "type": "pypi",
+                "name": "numpy"
+            }
         }
     ]
 }
