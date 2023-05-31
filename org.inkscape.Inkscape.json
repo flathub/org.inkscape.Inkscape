@@ -44,7 +44,7 @@
                 "/lib/libboost_*.a"
             ],
             "build-commands" : [
-                "./bootstrap.sh --with-libraries=filesystem",
+                "./bootstrap.sh --with-libraries=filesystem,stacktrace",
                 "./b2 install variant=release link=shared runtime-link=shared --prefix=/app -j $FLATPAK_BUILDER_N_JOBS"
             ],
             "sources": [
