@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "43",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "finish-args": [
@@ -193,23 +193,6 @@
                     "type" : "archive",
                     "url" : "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.5.tar.xz",
                     "sha256" : "856333de86689f6a81c123f2db15d85db9addc438bc3574c36f15736aeae22e6"
-                }
-            ]
-        },
-        {
-            "name": "gdl",
-            "cleanup" : [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "modules": [
-                "shared-modules/intltool/intltool-0.51.json"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdl/3.40/gdl-3.40.0.tar.xz",
-                    "sha256": "3641d4fd669d1e1818aeff3cf9ffb7887fc5c367850b78c28c775eba4ab6a555"
                 }
             ]
         },
@@ -443,6 +426,7 @@
                 }
             ]
         },
+        "shared-modules/libsoup/libsoup-2.4.json",
         {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
