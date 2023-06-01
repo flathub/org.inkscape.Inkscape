@@ -1,13 +1,12 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
-    "default-branch": "beta",
     "tags" : [
-       "beta"
-    ],
+        "beta"
+     ],
     "desktop-file-name-prefix": "(Beta) ",
     "finish-args": [
         "--share=ipc",
@@ -18,7 +17,6 @@
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
-        /* network access for extension manager */
         "--share=network"
     ],
     "cleanup": [
@@ -46,7 +44,7 @@
                 "/lib/libboost_*.a"
             ],
             "build-commands" : [
-                "./bootstrap.sh --with-libraries=filesystem",
+                "./bootstrap.sh --with-libraries=filesystem,stacktrace",
                 "./b2 install variant=release link=shared runtime-link=shared --prefix=/app -j $FLATPAK_BUILDER_N_JOBS"
             ],
             "sources": [
@@ -203,23 +201,6 @@
             ]
         },
         {
-            "name": "gdl",
-            "cleanup" : [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "modules": [
-                "shared-modules/intltool/intltool-0.51.json"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdl/3.40/gdl-3.40.0.tar.xz",
-                    "sha256": "3641d4fd669d1e1818aeff3cf9ffb7887fc5c367850b78c28c775eba4ab6a555"
-                }
-            ]
-        },
-        {
             "name": "potrace",
             "config-opts": ["--with-libpotrace"],
             "build-options": {
@@ -238,10 +219,7 @@
         "python3-tkinter.yaml",
         "python3-lxml.json",
         "python3-scour.json",
-        "python3-Pillow.json",
-        "python3-requests.json",
-        "python3-appdirs.json",
-        "python3-cssselect.json",
+        "python3-requirements.json",
         {
             "name": "poppler-data",
             "buildsystem": "cmake-ninja",
@@ -447,11 +425,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-6.9.12-23.tar.xz",
+                    "url": "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-23.tar.xz",
                     "sha256": "69e91deaafd1065bfc8741f99078350961f95135cd57d2a30bbc7588cc81f331"
                 }
             ]
         },
+        "shared-modules/libsoup/libsoup-2.4.json",
         {
             "name": "inkscape",
             "buildsystem": "cmake-ninja",
@@ -468,8 +447,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/33449/inkscape-1.2_2022-05-15_dc2aedaf03.tar.xz",
-                    "sha256": "8d9b31142554945664edfefe2d6b55910a5099765f7176a71107c34f1dcde6ad"
+                    "url": "https://inkscape.org/gallery/item/41222/inkscape-1.3beta0.tar.xz",
+                    "sha256": "6850d40ed7a22b7355b09ee3ae8ea19517f317c0f70b57c75913839546de1222"
                 }
             ]
         }

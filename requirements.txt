@@ -1,0 +1,6 @@
+appdirs
+cachecontrol[filecache]
+cssselect
+packaging
+Pillow
+requests
