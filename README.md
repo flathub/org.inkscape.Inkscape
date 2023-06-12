@@ -6,7 +6,7 @@ Inkscape need a certain number a Python modules at runtime.
 
 ### `requirements.txt`
 
-There is a top level `requirement.txt` to that contain all the modules
+There is a top level `requirements.txt` to that contain all the modules
 that can be installed using the standard mechanism.
 
 The corresponding manifest fragment is `python3-requirements.json`. It
