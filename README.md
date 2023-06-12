@@ -4,7 +4,7 @@
 
 Inkscape need a certain number a Python modules at runtime.
 
-### `requirement.txt`
+### `requirements.txt`
 
 There is a top level `requirement.txt` to that contain all the modules
 that can be installed using the standard mechanism.
