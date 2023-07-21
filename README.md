@@ -12,13 +12,10 @@ that can be installed using the standard mechanism.
 The corresponding manifest fragment is `python3-requirements.json`. It
 is generated using `flatpak-builder-tools`.
 ```
-./pip/flatpak-pip-generator -r PATH_TO/org.inkscape.Inkscape/requirements.txt
+./pip/flatpak-pip-generator -r PATH_TO/org.inkscape.Inkscape/requirements.txt --runtime org.gnome.Sdk//44 --ignore-installed lxml
 ```
 
-### `lxml` module
-
-Unfortunately `lxml` is not in the Platform but is in the Sdk. So it needs
-to be force installed.
+This will also take care of the `lxml` that needs to be force installed
 
 ## Permissions rationale
 

@@ -1,6 +1,10 @@
-appdirs
+appdirs==1.4.4
 cachecontrol[filecache]
-cssselect
-packaging
-Pillow
-requests
+cssselect==1.2.0
+packaging==23.1
+Pillow==10
+requests>=2.16.0
+cachecontrol==0.13.1
+lxml==4.9.3
+scour==0.37
+numpy==1.25.1
