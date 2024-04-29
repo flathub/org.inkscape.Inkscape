@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "tags" : [
@@ -115,6 +115,23 @@
                             "sha256": "f0ab566e25fce08b560e1feab6a3db01db4a38e5bc687804334ef3920c549f3e"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "cairo",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cairographics.org/releases/cairo-1.18.0.tar.xz",
+                    "sha256": "243a0736b978a33dee29f9cca7521733b78a65b5418206fef7bd1c3d4cf10b64",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 247,
+                        "stable-only": true,
+                        "url-template": "https://cairographics.org/releases/cairo-$version.tar.xz"
+                    }
                 }
             ]
         },
@@ -327,7 +344,7 @@
                 },
                 {
                     "type": "patch",
-                    "path": "libwpd-fix.patch"
+                    "path": "patches/libwpd-fix.patch"
                 }
             ]
         },
@@ -422,8 +439,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-23.tar.xz",
-                    "sha256": "69e91deaafd1065bfc8741f99078350961f95135cd57d2a30bbc7588cc81f331"
+                    "url": "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-96.tar.xz",
+                    "sha256": "570419d87cc8f22d36a038b4a91de349b181d3c23cfbedc241f89789564402b0"
                 }
             ]
         },
@@ -444,8 +461,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/42328/inkscape-1.3.tar.xz",
-                    "sha256": "bf4f286b025e0169b8948cc14d5199a9b4c204d761c894c4b48496571ec76307"
+                    "url": "https://inkscape.org/gallery/item/44615/inkscape-1.3.2.tar.xz",
+                    "sha256": "dbd1844dc443fe5e10d3e9a887144e5fb7223852fff191cfb5ef7adeab0e086b"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/inkscape-appdata.patch"
                 }
             ]
         }
