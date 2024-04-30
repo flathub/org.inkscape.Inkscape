@@ -1,10 +1,5 @@
 # Inkscape Flatpak
 
-## Cairo
-
-Cairo 1.18 is built in the flatpak for gradiant support in Inkscape 1.3.1.
-It should be removed when the newer runtime has it.
-
 ## Python dependencies
 
 Inkscape need a certain number a Python modules at runtime.

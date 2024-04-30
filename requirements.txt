@@ -1,7 +1,7 @@
 appdirs==1.4.4
 cachecontrol[filecache]
 cssselect==1.2.0
-packaging==23.1
+packaging
 Pillow==10.0.1
 requests>=2.16.0
 cachecontrol==0.13.1
