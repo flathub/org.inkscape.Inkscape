@@ -34,12 +34,12 @@
         {
             "name": "boost",
             "buildsystem": "simple",
-            "cleanup" : [
+            "cleanup": [
                 "/include",
                 "/lib/libboost_*.so",
                 "/lib/libboost_*.a"
             ],
-            "build-commands" : [
+            "build-commands": [
                 "./bootstrap.sh --with-libraries=filesystem,stacktrace",
                 "./b2 install variant=release link=shared runtime-link=shared --prefix=/app -j $FLATPAK_BUILDER_N_JOBS"
             ],
@@ -120,8 +120,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://cairographics.org/releases/cairo-1.18.0.tar.xz",
-                    "sha256": "243a0736b978a33dee29f9cca7521733b78a65b5418206fef7bd1c3d4cf10b64",
+                    "url": "https://cairographics.org/releases/cairo-1.18.2.tar.xz",
+                    "sha256": "a62b9bb42425e844cc3d6ddde043ff39dbabedd1542eba57a2eb79f85889d45a",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 247,
@@ -197,7 +197,7 @@
             ]
         },
         {
-            "name" : "gtkmm",
+            "name": "gtkmm",
             "buildsystem": "meson",
             "config-opts": [
                 "-Dbuild-documentation=false"
@@ -205,17 +205,19 @@
             "cleanup": [
                 "/lib/gtkmm-3.0"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.5.tar.xz",
-                    "sha256" : "856333de86689f6a81c123f2db15d85db9addc438bc3574c36f15736aeae22e6"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.5.tar.xz",
+                    "sha256": "856333de86689f6a81c123f2db15d85db9addc438bc3574c36f15736aeae22e6"
                 }
             ]
         },
         {
             "name": "potrace",
-            "config-opts": ["--with-libpotrace"],
+            "config-opts": [
+                "--with-libpotrace"
+            ],
             "build-options": {
                 "env": {
                     "CC": "gcc"
@@ -260,13 +262,17 @@
         {
             "name": "ghostscript",
             "config-opts": [
-              "--disable-cups",
-              "--disable-dbus",
-              "--disable-openjpeg",
-              "--disable-gtk"
+                "--disable-cups",
+                "--disable-dbus",
+                "--disable-openjpeg",
+                "--disable-gtk"
             ],
-            "make-args": [ "so" ],
-            "make-install-args": [ "soinstall" ],
+            "make-args": [
+                "so"
+            ],
+            "make-install-args": [
+                "soinstall"
+            ],
             "cleanup": [
                 "/share/man",
                 "/share/ghostscript/9.53/doc/",
@@ -321,7 +327,7 @@
                 {
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.xz",
-                    "sha256" : "933f0729f04267cc354b9a02bc3e9afefa5512a3bdd0b45f159ee14a3e3347b2"
+                    "sha256": "933f0729f04267cc354b9a02bc3e9afefa5512a3bdd0b45f159ee14a3e3347b2"
                 }
             ]
         },
@@ -336,7 +342,7 @@
                 {
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/libwpd/libwpd/libwpd-0.10.3/libwpd-0.10.3.tar.xz",
-                    "sha256" : "2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09"
+                    "sha256": "2465b0b662fdc5d4e3bebcdc9a79027713fb629ca2bff04a3c9251fdec42dd09"
                 },
                 {
                     "type": "patch",
@@ -396,8 +402,8 @@
                     "sha256": "5666249d613466b9aa1e987ea4109c04365866e9277d80f6cd9663e86b8ecdd4"
                 },
                 {
-                    "type" : "shell",
-                    "commands" : [
+                    "type": "shell",
+                    "commands": [
                         "autoreconf -vfi"
                     ]
                 }
@@ -405,12 +411,12 @@
         },
         {
             "name": "gspell",
-            "config-opts" : [
+            "config-opts": [
                 "--disable-vala",
                 "--disable-gtk-doc",
                 "--disable-gtk-doc-html"
             ],
-            "cleanup" : [
+            "cleanup": [
                 "/bin",
                 "/include",
                 "/lib/pkgconfig",
@@ -419,15 +425,15 @@
                 "/share/gtk-doc",
                 "/share/vala"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
-                    "sha256" : "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
+                    "sha256": "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
                 }
             ]
         },
-	{
+        {
             "name": "imagemagick",
             "config-opts": [
                 "--disable-static"
