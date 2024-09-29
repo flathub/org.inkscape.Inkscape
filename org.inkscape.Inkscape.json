@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "finish-args": [
@@ -111,23 +111,6 @@
                             "sha256": "f0ab566e25fce08b560e1feab6a3db01db4a38e5bc687804334ef3920c549f3e"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "cairo",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://cairographics.org/releases/cairo-1.18.0.tar.xz",
-                    "sha256": "243a0736b978a33dee29f9cca7521733b78a65b5418206fef7bd1c3d4cf10b64",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 247,
-                        "stable-only": true,
-                        "url-template": "https://cairographics.org/releases/cairo-$version.tar.xz"
-                    }
                 }
             ]
         },
@@ -462,7 +445,10 @@
                 },
                 {
                     "type": "patch",
-                    "path": "patches/inkscape-appdata.patch"
+                    "paths": [
+                        "patches/inkscape-appdata.patch",
+                        "patches/inkscape-build.patch"
+                    ]
                 }
             ]
         }

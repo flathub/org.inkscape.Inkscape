@@ -1,10 +1,5 @@
 # Inkscape Flatpak
 
-## Cairo
-
-Cairo 1.18 is built in the flatpak for gradiant support in Inkscape 1.3.1.
-It should be removed when the newer runtime has it.
-
 ## Python dependencies
 
 Inkscape need a certain number a Python modules at runtime.
@@ -17,10 +12,19 @@ that can be installed using the standard mechanism.
 The corresponding manifest fragment is `python3-requirements.json`. It
 is generated using `flatpak-builder-tools`.
 ```
-./pip/flatpak-pip-generator -r PATH_TO/org.inkscape.Inkscape/requirements.txt --runtime org.gnome.Sdk//44 --ignore-installed lxml
+./pip/flatpak-pip-generator -r PATH_TO/org.inkscape.Inkscape/requirements.txt --runtime org.gnome.Sdk//47 --ignore-installed lxml
 ```
 
-This will also take care of the `lxml` that needs to be force installed
+This will also take care of the `lxml` that needs to be force
+installed. Also the generated file must be patched to add:
+
+```json
+            "build-options": {
+                "cflags": "-fpermissive"
+            },
+```
+
+to the `python3-lxml` module so that it can be built with gcc 14.
 
 ## Permissions rationale
 
