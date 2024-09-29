@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "tags" : [
@@ -445,8 +445,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/51256/inkscape-1.4beta.tar.xz",
-                    "sha256": "af765396f477b1c9f9c191305244235c336e7702812532845fe00ee032990094"
+                    "url": "https://inkscape.org/gallery/item/53541/inkscape-1.4rc1.tar.xz",
+                    "sha256": "8f1a7f9aa912458241445faf562dee8d9733619d492236f170d1ca666bf72ded"
                 }
             ]
         }
