@@ -5,6 +5,7 @@ packaging
 Pillow==10.3.0
 requests>=2.16.0
 cachecontrol==0.13.1
-lxml==4.9.3
+lxml==4.9.4
 scour==0.37
-numpy==1.25.1
+meson-python
+numpy==1.26.4
