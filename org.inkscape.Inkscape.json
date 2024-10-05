@@ -250,6 +250,9 @@
             ],
             "make-args": [ "so" ],
             "make-install-args": [ "soinstall" ],
+            "post-install": [
+                "mv -f ${FLATPAK_DEST}/bin/{gsc,gs} "
+            ],
             "cleanup": [
                 "/share/man",
                 "/share/ghostscript/9.53/doc/",
