@@ -449,7 +449,6 @@
                 {
                     "type": "patch",
                     "paths": [
-                        "patches/inkscape-appdata.patch",
                         "patches/inkscape-build.patch"
                     ]
                 }
