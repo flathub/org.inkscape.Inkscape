@@ -434,6 +434,7 @@
                 "-DBUILD_TESTING=OFF",
                 "-DWITH_INTERNAL_2GEOM=ON"
             ],
+            "builddir": true,
             "build-options": {
                 "cxxflags": "-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66"
             },
@@ -443,15 +444,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/44615/inkscape-1.3.2.tar.xz",
-                    "sha256": "dbd1844dc443fe5e10d3e9a887144e5fb7223852fff191cfb5ef7adeab0e086b"
-                },
-                {
-                    "type": "patch",
-                    "paths": [
-                        "patches/inkscape-appdata.patch",
-                        "patches/inkscape-build.patch"
-                    ]
+                    "url": "https://inkscape.org/gallery/item/53679/inkscape-1.4.tar.xz",
+                    "sha256": "c59a85453b699addebcd51c1dc07684dd96a10c8aec716b19551db50562e13f5"
                 }
             ]
         }
