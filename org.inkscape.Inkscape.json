@@ -445,8 +445,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/53679/inkscape-1.4.tar.xz",
-                    "sha256": "c59a85453b699addebcd51c1dc07684dd96a10c8aec716b19551db50562e13f5"
+                    "url": "https://inkscape.org/gallery/item/56344/inkscape-1.4.2.tar.xz",
+                    "sha256": "2000530c7917e5260c9e8575a7154ff6926643d2006487d714e304a963f0c782"
                 }
             ]
         }
