@@ -307,8 +307,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.xz",
-                    "sha256" : "933f0729f04267cc354b9a02bc3e9afefa5512a3bdd0b45f159ee14a3e3347b2"
+                    "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.5/librevenge-0.0.5.tar.xz",
+                    "sha256" : "106d0c44bb6408b1348b9e0465666fa83b816177665a22cd017e886c1aaeeb34"
                 }
             ]
         },
@@ -341,8 +341,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.3.3/libwpg-0.3.3.tar.xz",
-                    "sha256": "99b3f7f8832385748582ab8130fbb9e5607bd5179bebf9751ac1d51a53099d1c"
+                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.3.4/libwpg-0.3.4.tar.xz",
+                    "sha256": "b55fda9440d1e070630eb2487d8b8697cf412c214a27caee9df69cec7c004de3"
                 }
             ]
         },
@@ -360,8 +360,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.7.tar.xz",
-                    "sha256": "8faf8df870cb27b09a787a1959d6c646faa44d0d8ab151883df408b7166bea4c"
+                    "url": "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.8.tar.xz",
+                    "sha256": "b4098ffbf4dcb9e71213fa0acddbd928f27bed30db2d80234813b15d53d0405b"
                 }
             ]
         },
@@ -379,8 +379,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.7.tar.xz",
-                    "sha256": "5666249d613466b9aa1e987ea4109c04365866e9277d80f6cd9663e86b8ecdd4"
+                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.8.tar.xz",
+                    "sha256": "ced677c8300b29c91d3004bb1dddf0b99761bf5544991c26c2ee8f427e87193c"
                 },
                 {
                     "type" : "shell",
