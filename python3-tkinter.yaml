@@ -5,7 +5,7 @@ build-commands:
 sources:
   - type: git
     url: https://github.com/iwalton3/tkinter-standalone
-    commit: 88aa05075d90d393a29a484bce676e237d311082
+    commit: 35bde961500fc39ebc5587dcc032a6de31adfe4a
 modules:
   - name: tcl
     buildsystem: autotools
