@@ -4,6 +4,10 @@
     "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
+    "tags" : [
+       "beta"
+    ],
+    "desktop-file-name-prefix": "(Beta) ",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -445,8 +449,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/56344/inkscape-1.4.2.tar.xz",
-                    "sha256": "2000530c7917e5260c9e8575a7154ff6926643d2006487d714e304a963f0c782"
+                    "url": "https://inkscape.org/gallery/item/58845/inkscape-1.4.3rc_2025-12-13_9500139e98.tar.xz",
+                    "sha256": "e672f89e79fa1eac46bef4f9cee55b240fbbd6f65a276d6283c71645ece3853c"
                 }
             ]
         }
