@@ -1,7 +1,7 @@
 name: tkinter
 buildsystem: simple
 build-commands:
-  - pip3 install --prefix=${FLATPAK_DEST} .
+  - pip3 install --prefix=${FLATPAK_DEST} --no-build-isolation .
 sources:
   - type: git
     url: https://github.com/iwalton3/tkinter-standalone
