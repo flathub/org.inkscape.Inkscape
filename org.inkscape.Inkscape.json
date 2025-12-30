@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "tags" : [
@@ -12,6 +12,7 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
+        "--device=dri",
         "--filesystem=host",
         "--filesystem=xdg-config/gtk-3.0",
         "--filesystem=xdg-run/gvfs",
@@ -50,7 +51,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2",
+                    "url": "https://archives.boost.io/release/1.78.0/source/boost_1_78_0.tar.bz2",
                     "sha256": "8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc"
                 }
             ]
@@ -111,7 +112,7 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.12/libatomic_ops-7.6.12.tar.gz",
+                            "url": "https://github.com/bdwgc/libatomic_ops/releases/download/v7.6.12/libatomic_ops-7.6.12.tar.gz",
                             "sha256": "f0ab566e25fce08b560e1feab6a3db01db4a38e5bc687804334ef3920c549f3e"
                         }
                     ]
@@ -254,6 +255,9 @@
             ],
             "make-args": [ "so" ],
             "make-install-args": [ "soinstall" ],
+            "post-install": [
+                "mv -f ${FLATPAK_DEST}/bin/{gsc,gs} "
+            ],
             "cleanup": [
                 "/share/man",
                 "/share/ghostscript/9.53/doc/",
@@ -307,8 +311,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.xz",
-                    "sha256" : "933f0729f04267cc354b9a02bc3e9afefa5512a3bdd0b45f159ee14a3e3347b2"
+                    "url": "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.5/librevenge-0.0.5.tar.xz",
+                    "sha256" : "106d0c44bb6408b1348b9e0465666fa83b816177665a22cd017e886c1aaeeb34"
                 }
             ]
         },
@@ -341,8 +345,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.3.3/libwpg-0.3.3.tar.xz",
-                    "sha256": "99b3f7f8832385748582ab8130fbb9e5607bd5179bebf9751ac1d51a53099d1c"
+                    "url": "https://downloads.sourceforge.net/project/libwpg/libwpg/libwpg-0.3.4/libwpg-0.3.4.tar.xz",
+                    "sha256": "b55fda9440d1e070630eb2487d8b8697cf412c214a27caee9df69cec7c004de3"
                 }
             ]
         },
@@ -360,8 +364,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.7.tar.xz",
-                    "sha256": "8faf8df870cb27b09a787a1959d6c646faa44d0d8ab151883df408b7166bea4c"
+                    "url": "https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.8.tar.xz",
+                    "sha256": "b4098ffbf4dcb9e71213fa0acddbd928f27bed30db2d80234813b15d53d0405b"
                 }
             ]
         },
@@ -379,8 +383,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.7.tar.xz",
-                    "sha256": "5666249d613466b9aa1e987ea4109c04365866e9277d80f6cd9663e86b8ecdd4"
+                    "url": "https://dev-www.libreoffice.org/src/libcdr/libcdr-0.1.8.tar.xz",
+                    "sha256": "ced677c8300b29c91d3004bb1dddf0b99761bf5544991c26c2ee8f427e87193c"
                 },
                 {
                     "type" : "shell",
@@ -445,8 +449,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/53679/inkscape-1.4.tar.xz",
-                    "sha256": "c59a85453b699addebcd51c1dc07684dd96a10c8aec716b19551db50562e13f5"
+                    "url": "https://inkscape.org/gallery/item/58845/inkscape-1.4.3rc_2025-12-13_9500139e98.tar.xz",
+                    "sha256": "e672f89e79fa1eac46bef4f9cee55b240fbbd6f65a276d6283c71645ece3853c"
                 }
             ]
         }

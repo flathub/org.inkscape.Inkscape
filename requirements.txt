@@ -9,3 +9,4 @@ lxml==4.9.4
 scour==0.37
 meson-python
 numpy==1.26.4
+tinycss2
