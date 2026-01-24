@@ -228,8 +228,10 @@
             "config-opts": [
               "--disable-cups",
               "--disable-dbus",
-              "--disable-openjpeg",
-              "--disable-gtk"
+              "--disable-gtk",
+              "--without-tesseract",
+              "--with-system-libtiff",
+              "--with-local-zlib=no"
             ],
             "make-args": [ "so" ],
             "make-install-args": [ "soinstall" ],
@@ -250,13 +252,7 @@
                 {
                     "type": "shell",
                     "commands": [
-                        "cp -p /usr/share/automake-*/config.{sub,guess} freetype/builds/unix/",
-                        "cp -p /usr/share/automake-*/config.{sub,guess} ijs/",
-                        "cp -p /usr/share/automake-*/config.{sub,guess} jpeg/",
-                        "cp -p /usr/share/automake-*/config.{sub,guess} libpng/",
-                        "cp -p /usr/share/automake-*/config.{sub,guess} lcms2mt/",
-                        "cp -p /usr/share/automake-*/config.{sub,guess} tiff/config/",
-                        "rm -rf libpng/pngread.c"
+                        "rm -rf freetype jpeg lcms2* libpng openjpeg tiff zlib"
                     ]
                 }
             ]
