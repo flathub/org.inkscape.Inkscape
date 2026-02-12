@@ -1,7 +1,6 @@
 appdirs
 cachecontrol[filecache]
 cssselect
-packaging
 pybind11
 Pillow
 requests
