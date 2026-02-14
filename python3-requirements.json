@@ -83,6 +83,9 @@
         {
             "name": "python3-pybind11",
             "buildsystem": "simple",
+	    "cleanup": [
+		    "*"
+	    ],
             "build-commands": [
                 "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pybind11\" --no-build-isolation"
             ],
