@@ -4,6 +4,18 @@
     "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
+    "add-extensions":
+    {
+        "org.inkscape.Inkscape.Extension": {
+            "directory": "share/inkscape/extensions",
+            "subdirectories": "true",
+            "no-autodownload": "true",
+            "autodelete": "true"
+        }
+    },
+    "cleanup-commands": [
+        "mkdir -p ${FLATPAK_DEST}/share/inkscape/extensions"
+    ],
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
