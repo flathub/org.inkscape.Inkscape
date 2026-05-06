@@ -423,8 +423,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://inkscape.org/gallery/item/58914/inkscape-1.4.3.tar.xz",
-                    "sha256": "e83a2c3db570b6c5a1ff0fccfe7098837b3f6bd74b133567937c8a91710ed1d1"
+                    "url": "https://inkscape.org/gallery/item/59505/inkscape-1.4.4.tar.xz",
+                    "sha256": "bbce5753a1e08b871a5cf16c665eb060700aaab9a6a379dc63f4c4d9b3b8856e"
                 }
             ]
         }
