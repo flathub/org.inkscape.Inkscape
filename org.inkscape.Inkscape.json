@@ -10,7 +10,7 @@
         "--socket=wayland",
         "--device=dri",
         "--filesystem=host",
-        "--filesystem=xdg-config/gtk-3.0",
+        "--filesystem=xdg-config/gtk-3.0:ro",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
