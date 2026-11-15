@@ -1,7 +1,7 @@
 {
     "app-id": "org.inkscape.Inkscape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "50",
+    "runtime-version": "51",
     "sdk": "org.gnome.Sdk",
     "command": "inkscape",
     "finish-args": [
@@ -126,8 +126,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.1.tar.xz",
-                    "sha256": "69bd6b5327716ca2f511ab580a969fd7bf0cd2c24ce15e1d0e530592d3ff209c"
+                    "url": "https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.10.tar.xz",
+                    "sha256": "2b61780203aed98e701d3ea57c8f353e7c8ada9706a79be782f6c5153dd035c0"
                 }
             ]
         },
