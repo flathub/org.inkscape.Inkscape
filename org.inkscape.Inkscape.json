@@ -400,7 +400,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-96.tar.xz",
+                    "url": "https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/releases/ImageMagick-6.9.12-96.tar.xz",
                     "sha256": "570419d87cc8f22d36a038b4a91de349b181d3c23cfbedc241f89789564402b0"
                 }
             ]
