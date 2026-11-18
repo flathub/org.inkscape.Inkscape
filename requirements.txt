@@ -10,3 +10,4 @@ scour
 meson-python
 numpy
 tinycss2
+zstandard
