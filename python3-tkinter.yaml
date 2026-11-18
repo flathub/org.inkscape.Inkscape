@@ -20,8 +20,8 @@ modules:
       - /man
     sources:
       - type: archive
-        url: https://prdownloads.sourceforge.net/tcl/tcl9.0.3-src.tar.gz
-        sha256: 2537ba0c86112c8c953f7c09d33f134dd45c0fb3a71f2d7f7691fd301d2c33a6
+        url: https://prdownloads.sourceforge.net/tcl/tcl9.0.4-src.tar.gz
+        sha256: d0aed49230bc02a65c1e0229e65f34590a4b037ec40d546f32573b467f7551ea
         x-checker-data:
           type: anitya
           project-id: 4941
